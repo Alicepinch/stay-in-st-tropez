@@ -77,3 +77,41 @@ h6 {
   left:0; 
   top:0;
 }
+
+/* Containers */
+
+.introduction-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.introduction-container h2 {
+    padding-bottom: 1rem;
+}
+
+.video-container iframe {
+    height: 35vh;
+    width: 30vw;
+}
+
+/* Button Styling */
+
+button {
+    background-color:#B7A3D0;
+    color: #ffff;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 30px;
+    border: #B7A3D0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    transition: all 200ms ease-in-out;
+}
+
+button:hover, button:active  {
+    background-color: #7B8945;
+    color: #fff;
+}
