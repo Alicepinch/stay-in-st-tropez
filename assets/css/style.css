@@ -166,3 +166,19 @@ input:focus, textarea:focus {
     box-shadow: 0 0 10px #7B8945;
 }
 
+/* Footer */
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks li {
+    display: inline;
+    text-decoration: none;
+}
+
+.social-networks i {
+    color: #B7A3D0;
+    font-size: 1.5rem;
+}
+
