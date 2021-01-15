@@ -178,7 +178,14 @@ input:focus, textarea:focus {
 }
 
 .social-networks i {
+    color: #8F8F96;
+    font-size: 2em;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.social-networks i:hover {
     color: #B7A3D0;
-    font-size: 1.5rem;
 }
 
