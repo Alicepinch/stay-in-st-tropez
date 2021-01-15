@@ -27,6 +27,21 @@ h6 {
   color: #B7A3D0;
 }
 
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: #B7A3D0;
+  font-weight: 500;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #7B8945;
+}
+
 /* Navigation and Logo */
 
 #company-logo {
@@ -98,6 +113,11 @@ h6 {
     width: 30vw;
 }
 
+.buttons-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 /* Button Styling */
 
 button {
@@ -111,7 +131,8 @@ button {
     transition: all 200ms ease-in-out;
 }
 
-button:hover, button:active  {
+button:hover  {
     background-color: #7B8945;
     color: #fff;
+    cursor: pointer;
 }
