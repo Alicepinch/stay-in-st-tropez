@@ -40,7 +40,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #7B8945;
+    color: #897261;
     transition: all 200ms ease-in-out;
 }
 
@@ -70,7 +70,7 @@ a:hover {
 }
 
 .nav-item:hover {
-    color: #7B8945;
+    color: #897261;
     text-decoration: none;
 }
 
@@ -108,11 +108,11 @@ a:hover {
 }
 
 .introduction-container h2 {
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
 }
 
 .contact-container h2 {
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
 }
 
 .video-container iframe {
@@ -125,7 +125,7 @@ a:hover {
 }
 
 .buttons-container h2 {
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
 }
 
 /* Button Styling */
@@ -142,7 +142,7 @@ button {
 }
 
 button:hover  {
-    background-color: #7B8945;
+    background-color: #897261;
     color: #fff;
 }
 
