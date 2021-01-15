@@ -104,6 +104,14 @@ a:hover {
     margin-bottom: 3rem;
 }
 
+.introduction-container h2 {
+    padding-bottom: 1rem;
+}
+
+.contact-container h2 {
+    padding-bottom: 1rem;
+}
+
 .video-container iframe {
     height: 35vh;
     width: 30vw;
@@ -112,6 +120,10 @@ a:hover {
 .buttons-container {
     text-align: center;
     margin-bottom: 3rem;
+}
+
+.buttons-container h2 {
+    padding-bottom: 1rem;
 }
 
 /* Button Styling */
