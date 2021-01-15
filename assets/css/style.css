@@ -95,7 +95,7 @@ a:hover {
 
 /* Containers */
 
-.introduction-container {
+.introduction-container, .contact-container {
     background-color: white;
     border-radius: 20px;
     padding: 3rem;
@@ -104,7 +104,7 @@ a:hover {
     margin-bottom: 3rem;
 }
 
-.introduction-container h2 {
+.introduction-container .contact-container h2 {
     padding-bottom: 1rem;
 }
 
@@ -136,3 +136,5 @@ button:hover  {
     color: #fff;
     cursor: pointer;
 }
+
+/* Contact form */
