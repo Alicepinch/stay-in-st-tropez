@@ -146,6 +146,14 @@ button:hover  {
     color: #fff;
 }
 
+/* Map */
+
+#map {
+    margin-top: 1rem;
+    min-height: 500px;
+    width: 100%;
+}
+
 /* Contact form */
 
 .form-input {
