@@ -143,14 +143,21 @@
 
         <!----Contact Form---->
 
-
         <section id="contact">
+
             <div class="container contact-container">
                 <div class="row">
                     <div class="col-12 ">
                         <h2>Contact</h2>
-                        <form>
-
+                        <form method="POST">
+                            <input type="text" id="fname" placeholder="First Name" name="fname" required />
+                            <input type="text" id="lname" placeholder="Last Name" name="lname" required />
+                            <input type="email" id="email" placeholder="Email Address" name="email" required />
+                            <input type="text" id="subject" placeholder="Subject" name="subject" />
+                            <textarea rows="5" placeholder="Message" name="message" required></textarea>
+                            <button type="submit">
+                                Submit
+                            </button>
                         </form>
                     </div>
                 </div>
