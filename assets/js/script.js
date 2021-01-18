@@ -18,11 +18,11 @@ $(function () {
 
 // Display Youtube video on click
 
-$(function () {
-    $("iframe").hide();
+$(function toggleVideo() {
+    $(".video-container").hide();
     $("#youtube-video").click(function () {
-        $("iframe").slideToggle();
+        $(".video-container").slideToggle();
     });
 });
 
-// Button styling with Jquery 
+
