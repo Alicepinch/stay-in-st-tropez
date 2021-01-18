@@ -15,3 +15,12 @@ $(function () {
 });
 
 //End of credit
+
+// Display Youtube on click
+
+$(function () {
+    $("iframe").hide();
+    $("#youtube-video").click(function () {
+        $("iframe").toggle();
+    });
+});
