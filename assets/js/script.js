@@ -16,11 +16,13 @@ $(function () {
 
 //End of credit
 
-// Display Youtube on click
+// Display Youtube video on click
 
 $(function () {
     $("iframe").hide();
     $("#youtube-video").click(function () {
-        $("iframe").toggle();
+        $("iframe").slideToggle();
     });
 });
+
+// Button styling with Jquery 
