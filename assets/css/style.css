@@ -98,7 +98,7 @@ a:hover {
 
 /* Containers */
 
-.introduction-container, .contact-container {
+.introduction-container, .contact-container, .recommendations-container {
     background-color: white;
     border-radius: 20px;
     padding: 3rem;
