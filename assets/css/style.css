@@ -134,19 +134,19 @@ a:hover {
 
 button {
     background-color:#B7A3D0;
-    color: #ffff;
+    color: #fff;
     padding: .5rem 1rem .5rem 1rem;
     border-radius: 30px;
     border: #B7A3D0;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in;
 }
 
-button:hover, .active {
+button:hover, button:focus, .active {
     background-color: #897261;
     color: #fff;
-     transition: all 200ms ease-in-out;
+    outline: none;
 }
 
 /* Map */
