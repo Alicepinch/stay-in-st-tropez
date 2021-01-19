@@ -18,11 +18,20 @@ $(function () {
 
 // Display Youtube video on click
 
-$(function toggleVideo() {
+$(function () {
     $(".video-container").hide();
     $("#youtube-video").click(function () {
         $(".video-container").slideToggle();
+        $("#youtube-video").html("Hide Video");
     });
+
 });
 
+// Button styling for when a Button is active Jquery 
+
+$(function () {
+    $("button").click(function () {
+        $(this).addClass("active");
+    })
+});
 

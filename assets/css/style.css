@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-/* * {
+* {
     margin:0; 
     padding: 0;
     border: 0;
-} */
+} 
 
 body {
     background-color: #f0f0e5;
@@ -105,6 +105,7 @@ a:hover {
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    max-width: 90%;
 }
 
 .introduction-container h2 {
@@ -141,7 +142,7 @@ button {
     transition: all 200ms ease-in-out;
 }
 
-button:hover {
+button:hover, .active {
     background-color: #897261;
     color: #fff;
 }
@@ -196,4 +197,3 @@ input:focus, textarea:focus {
 .social-networks i:hover {
     color: #B7A3D0;
 }
-
