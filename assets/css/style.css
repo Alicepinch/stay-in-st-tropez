@@ -105,12 +105,13 @@ a:hover {
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    max-width: 80%;
+    max-width: 70%;
 }
 
 .introduction-container h2 {
     padding-bottom: .5rem;
 }
+
 
 .contact-container h2 {
     padding-bottom: .5rem;
@@ -145,6 +146,7 @@ button {
 button:hover, .active {
     background-color: #897261;
     color: #fff;
+     transition: all 200ms ease-in-out;
 }
 
 /* Map */
@@ -169,12 +171,13 @@ button:hover, .active {
     margin-bottom: 0;
 }
 
-.more-details {
+.recommendation p  {
     padding: 1rem;
     margin: 0;
 }
 
 /* Contact form */
+
 
 .form-input {
     margin-bottom: 1rem;
