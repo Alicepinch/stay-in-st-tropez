@@ -117,6 +117,7 @@ a:hover {
     padding-bottom: .5rem;
 }
 
+
 .video-container iframe {
     height: 40vh;
     width: 35vw;
@@ -143,7 +144,7 @@ button {
     transition: all 300ms ease-in;
 }
 
-button:hover, button:focus, .active {
+button:hover, .active {
     background-color: #897261;
     color: #fff;
     outline: none;

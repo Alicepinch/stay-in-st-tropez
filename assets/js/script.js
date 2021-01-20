@@ -1,4 +1,3 @@
-
 //Hides the following components when page is loaded
 $(".video-container").hide();
 $('#reco-para-1').hide();
@@ -7,7 +6,6 @@ $('#reco-para-3').hide();
 
 /// Slideshow created following the Snook tutorial https://snook.ca/archives/javascript/simplest-jquery-slideshow using jQuery
 /// Creats a slideshow of images for the header
-
 $(function () {
     $('.slideshow img:gt(0)').hide();
     setInterval(function () {
@@ -53,6 +51,7 @@ window.onscroll = function () { scrollToTop() };
 
 //Function displays the button if the window is less than 40px from the top of the window, keeps it hidden if not
 function scrollToTop() {
+
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
         scrollButton.style.display = "block";
     } else {
@@ -65,4 +64,23 @@ function scrollToTop() {
 function topOfPage() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}
+};
+
+//Function changes text and colour of button when clicked for 'Watch Video CTA'
+function changeText() {
+    var videoButton = document.getElementById("youtube-video");
+    if (videoButton.innerHTML === "Watch Video") {
+        videoButton.innerHTML = "Hide Video";
+        videoButton.classList.add("active");
+    }
+    else {
+        videoButton.innerHTML = "Watch Video";
+        videoButton.classList.remove("active");
+    };
+};
+//Event listener for when customer clicks on the 'watch video' cta
+document.getElementById("youtube-video").addEventListener("click", changeText);
+
+
+
+
