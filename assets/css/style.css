@@ -149,6 +149,16 @@ button:hover, button:focus, .active {
     outline: none;
 }
 
+#scroll-top {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 1;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
 /* Map */
 
 #map {
