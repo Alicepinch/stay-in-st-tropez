@@ -1,4 +1,10 @@
 
+//Hides the following components when page is loaded
+$(".video-container").hide();
+$('#reco-para-1').hide();
+$('#reco-para-2').hide();
+$('#reco-para-3').hide();
+
 /// Slideshow created following the Snook tutorial https://snook.ca/archives/javascript/simplest-jquery-slideshow using jQuery
 /// Creats a slideshow of images for the header
 
@@ -16,20 +22,6 @@ $(function () {
 });
 
 //End of credit
-
-// Button's will turn brown when clicked on
-$(function () {
-    $("button").click(function () {
-        $(this).addClass("active");
-        $("button").not(this).removeClass("active");
-    })
-});
-
-//Hides the following components when page is loaded
-$(".video-container").hide();
-$('#reco-para-1').hide();
-$('#reco-para-2').hide();
-$('#reco-para-3').hide();
 
 // Toggles content when button is clicked for youtube video and more details
 $(function () {
@@ -50,3 +42,27 @@ $(function () {
     });
 
 });
+
+//End of jQuery
+
+//Assigns scroll button to variable
+var scrollButton = document.getElementById("scroll-top");
+
+//Assigns the scroll function to window scroll
+window.onscroll = function () { scrollToTop() };
+
+//Function displays the button if the window is less than 40px from the top of the window, keeps it hidden if not
+function scrollToTop() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+
+};
+
+//Function sets the location as 0px from top of the page to be called by button
+function topOfPage() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
