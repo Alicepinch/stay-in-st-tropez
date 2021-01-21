@@ -1,6 +1,6 @@
 // Setting locations for the beach locations
 
-let beachLocations = [{
+var beachLocations = [{
     //Nikki Beach
     coords: {
         lat: 43.221006,
@@ -97,7 +97,7 @@ let beachLocations = [{
         lat: 43.244190824586596,
         lng: 6.666079775341165
     },
-    content: `<h6>Restaurant Tahiti Beach</h6>`
+    content: `<h6>Tahiti Beach</h6>`
 }, {
     //  Tropezina Beach
     coords: {
@@ -105,32 +105,38 @@ let beachLocations = [{
         lng: 6.667101309880046
     },
     content: `<h6>Tropezina Beach</h6>`
-},];
+}];
+
+
 
 
 //Google map API
 
-function initMap() {
-    // New Map
+function initMap(locations) {
 
     //mapOptions set as St Tropez Coordinates
     var mapOptions = {
         zoom: 12,
-        center: { lat:43.24410793943678, lng:6.6385947138770325 },
+        center: { lat: 43.24410793943678, lng: 6.6385947138770325 },
     };
 
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-    for (var i = 0; i < beachLocations.length; i++) {
-        addMarker(beachLocations[i]);
+    //For loop to iterate through all of the beach location markers
+    for (var i = 0; i < locations.length; i++) {
+        addMarker(locations[i]),
     }
 
+
+
+    //Function with props paramater passed through to pull coords from the location array. 
     function addMarker(props) {
         var marker = new google.maps.Marker({
             position: props.coords,
             map: map,
         });
 
+        //If statement to check whether the array has a content property to display info window. 
         if (props.content) {
             var infoWindow = new google.maps.InfoWindow({
                 content: props.content,
@@ -141,8 +147,14 @@ function initMap() {
             });
 
         }
-    }
-};
 
+    };
 
+}
+
+//Event listener when clicking 'Beach'CTA
+document.getElementById("beach-clubs").addEventListener("click", function () {
+    initMap(beachLocations);
+
+});
 
