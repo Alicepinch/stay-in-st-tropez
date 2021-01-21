@@ -31,6 +31,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #8F8F96;
+  font-size: 17px;
 }
 
 a {
@@ -108,15 +109,13 @@ a:hover {
     max-width: 70%;
 }
 
-.introduction-container h2 {
-    padding-bottom: .5rem;
+.recommendation h4 {
+    margin: 0;
 }
 
-
-.contact-container h2 {
+.introduction-container, .contact-container h2 {
     padding-bottom: .5rem;
 }
-
 
 .video-container iframe {
     height: 40vh;
@@ -165,11 +164,12 @@ button:hover, .active {
 
 #map {
     margin-top: 1rem;
-    min-height: 500px;
+    min-height: 600px;
     width: 100%;
 }
 
 /* Recommendations */
+
 
 .recommendation img{
     width: 100%;
@@ -232,3 +232,17 @@ input:focus, textarea:focus {
 .social-networks i:hover {
     color: #B7A3D0;
 }
+
+/* Media Queries */ 
+
+@media screen and (max-width: 767px) {
+
+.introduction-container, .contact-container, .recommendations-container {
+    max-width: 90%;
+}
+
+.recommendation button {
+    margin-bottom: 1rem;
+}
+}
+
