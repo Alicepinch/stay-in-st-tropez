@@ -117,7 +117,7 @@ function initMap(locations) {
     //mapOptions set as St Tropez Coordinates
     var mapOptions = {
         zoom: 12,
-        center: { lat: 43.24410793943678, lng: 6.6385947138770325 },
+        center: { lat: 43.241231711164154, lng: 6.642027488761515 },
     };
 
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -125,6 +125,7 @@ function initMap(locations) {
     //For loop to iterate through all of the beach location markers
     for (var i = 0; i < locations.length; i++) {
         addMarker(locations[i]),
+         map.setZoom(13);
     }
 
 
