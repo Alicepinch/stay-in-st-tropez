@@ -10,7 +10,7 @@ body {
     background-color: #f0f0e5;
 }
 
-/* Heading and Text styling */
+/* Heading and Text styling for whole page */
 
 h1 {
   font-family: "Poppins", sans-serif;
@@ -75,7 +75,7 @@ a:hover {
     text-decoration: none;
 }
 
-/* Hero Image SlideShow styling borrowed from https://snook.ca/archives/javascript/simplest-jquery-slideshow */
+/* Hero Image SlideShow styling borrowed from adjusted https://snook.ca/archives/javascript/simplest-jquery-slideshow */
 
 .slideshow-container {
     position: relative;
@@ -92,7 +92,7 @@ a:hover {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  position:absolute; 
+  position: absolute; 
   left:0; 
   top:0;
 }
@@ -109,10 +109,6 @@ a:hover {
     max-width: 70%;
 }
 
-.recommendation h4 {
-    margin: 0;
-}
-
 .introduction-container, .contact-container h2 {
     padding-bottom: .5rem;
 }
@@ -122,12 +118,16 @@ a:hover {
     width: 35vw;
 }
 
-.buttons-container {
+.locations-container {
     text-align: center;
 }
 
-.buttons-container h2 {
+.locations-container h2 {
     padding-bottom: .5rem;
+}
+
+.recommendation h4 {
+    margin: 0;
 }
 
 /* Button Styling */
@@ -141,12 +141,12 @@ button {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
     transition: all 300ms ease-in;
+    outline: none !important;
 }
 
 button:hover, .active {
     background-color: #897261;
     color: #fff;
-    outline: none;
 }
 
 #scroll-top {
@@ -168,8 +168,6 @@ button:hover, .active {
     width: 100%;
 }
 
-
-
 .info-heading {
     color: #897261;
 }
@@ -181,7 +179,7 @@ button:hover, .active {
 
 /* Recommendations */
 
-.recommendation img{
+.recommendation img {
     width: 100%;
     height: 30vh;
     object-fit: cover;
@@ -200,7 +198,6 @@ button:hover, .active {
 
 /* Contact form */
 
-
 .form-input {
     margin-bottom: 1rem;
 }
@@ -218,7 +215,6 @@ input:focus, textarea:focus {
     border-color: #897261;
     box-shadow: 0 0 10px #897261;
 }
-
 
 /* Footer */
 
