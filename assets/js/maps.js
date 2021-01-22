@@ -132,6 +132,69 @@ var beachLocations = [{
     </div>`
 }];
 
+var vineyardLocations = [{
+    //Mirabeau 
+    coords: {
+        lat: 43.37999485095804,
+        lng: 6.456866067455784
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Domain Mirabeau</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Domaine des beaucas
+    coords: {
+        lat: 43.37000114135553,
+        lng: 6.569191898304937
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Domaine Des Beaucas</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Château Minuty
+    coords: {
+        lat: 43.246187427866225,
+        lng: 6.6155934312658475
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Château Minuty</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Château des Marres
+    coords: {
+        lat: 43.2451870917524,
+        lng: 6.664001938769536
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Domaine Des Beaucas</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Domaine de la Croix
+    coords: {
+        lat: 43.20190683545636,
+        lng: 6.587784289318764
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Domaine de la Croix</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Chateau Barbeyrolles
+    coords: {
+        lat: 43.24143568423566, 
+        lng: 6.582634448094969
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Chateau Barbeyrolles</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}];
+
+
 
 //Google map API created following the guides from https://developers.google.com/maps/documentation/javascript/how-tos
 
@@ -139,7 +202,7 @@ function initMap(locations) {
 
     //mapOptions set as St Tropez Coordinates
     var mapOptions = {
-        zoom: 12,
+        zoom: 8,
         center: { lat: 43.22697421106884, lng: 6.606236091462182 },
     };
 
@@ -148,7 +211,7 @@ function initMap(locations) {
     //For loop to iterate through all of the location markers
     for (var i = 0; i < locations.length; i++) {
         addMarker(locations[i]),
-            map.setZoom(13);
+            map.setZoom(10);
     }
 
     //Function with props paramater passed through to pull coords from the location array. 
@@ -178,4 +241,11 @@ function initMap(locations) {
 document.getElementById("beach-clubs").addEventListener("click", function () {
     initMap(beachLocations);
 });
+
+//Event listener when clicking 'Vineyard CTA
+document.getElementById("vineyards").addEventListener("click", function () {
+    initMap(vineyardLocations);
+    
+});
+
 
