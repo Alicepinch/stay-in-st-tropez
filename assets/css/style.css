@@ -24,18 +24,18 @@ h5,
 h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #B7A3D0;
+  color: #9882b3;
 }
 
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #8F8F96;
+  color: #6e6e77;
   font-size: 17px;
 }
 
 a {
-  color: #B7A3D0;
+  color: #9882b3;
   font-weight: 500;
 }
 
@@ -56,7 +56,7 @@ a:hover {
     padding: .5rem;
     margin: 0;
     text-transform: uppercase;
-    color: #8F8F96;
+    color: #6e6e77;
 }
 
 .navigation-bar {
@@ -64,7 +64,7 @@ a:hover {
 }
 
 .nav-item {
-    color: #B7A3D0;
+    color: #9882b3;
     font-size: 1.2em;
     font-family:"Poppins", sans-serif;
     padding: 1rem;
@@ -133,7 +133,7 @@ a:hover {
 /* Button Styling */
 
 button {
-    background-color:#B7A3D0;
+    background-color:#9882b3;
     color: #fff;
     padding: .5rem 1rem .5rem 1rem;
     border-radius: 30px;
@@ -168,8 +168,18 @@ button:hover, .active {
     width: 100%;
 }
 
-/* Recommendations */
 
+
+.info-heading {
+    color: #897261;
+}
+
+.info-text {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* Recommendations */
 
 .recommendation img{
     width: 100%;
@@ -197,7 +207,7 @@ button:hover, .active {
 
 .form-field {
     width: 100%;
-    border: 1px solid #8F8F96;
+    border: 1px solid #6e6e77;
     border-radius: 20px;
     padding: .5rem;
     font-family: "Roboto", sans-serif;
@@ -222,7 +232,7 @@ input:focus, textarea:focus {
 }
 
 .social-networks i {
-    color: #8F8F96;
+    color: #6e6e77;
     font-size: 2em;
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -230,7 +240,7 @@ input:focus, textarea:focus {
 }
 
 .social-networks i:hover {
-    color: #B7A3D0;
+    color: #9882b3;
 }
 
 /* Media Queries */ 
