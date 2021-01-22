@@ -132,6 +132,8 @@ var beachLocations = [{
     </div>`
 }];
 
+//Vineyard Locations
+
 var vineyardLocations = [{
     //Château Minuty
     coords: {
@@ -214,6 +216,100 @@ var vineyardLocations = [{
     </div>`
 }];
 
+//Restaurant locations
+
+var restaurantsLocations = [{
+    //Senequier
+    coords: {
+        lat: 43.272405494824405,
+        lng: 6.639452548172136
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Senequier</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Dior Des Lices
+    coords: {
+        lat: 43.27096421961096,
+        lng: 6.640466423161481
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Dior Des Lices</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Restaurant L'Italien
+    coords: {
+        lat: 43.272680856557976,
+        lng: 6.639042170181241
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Restaurant L'Italien</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Cave de Saint Tropez
+    coords: {
+        lat: 43.271423165972216,
+        lng: 6.638843686717584
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Cave de Saint Tropez</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Resto Thaï
+    coords: {
+        lat: 43.27074158055439,
+        lng: 6.637950511118492
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Resto Thaï</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Pablo
+    coords: {
+        lat: 43.26989202930117,
+        lng: 6.64170426260321
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Pablo</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Luna Rossa
+    coords: {
+        lat: 43.26984515716403,
+        lng: 6.641968460216969
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Luna Rossa</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //La Ramade
+    coords: {
+        lat: 43.2692582758765,
+        lng: 6.641541988985785
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">La Ramade</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Salama
+    coords: {
+        lat: 43.268067712159066,
+        lng: 6.6397375229399636
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Salama</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}];
+
 //Google map API created following the guides from https://developers.google.com/maps/documentation/javascript/how-tos
 
 function initMap(locations) {
@@ -231,7 +327,7 @@ function initMap(locations) {
         addMarker(locations[i]);
     }
 
-    //Function with props paramater passed through to pull coords from the location array. 
+    // Function with props paramater passed through to pull coords from array. 
     function addMarker(props) {
         var marker = new google.maps.Marker({
             position: props.coords,
@@ -246,16 +342,9 @@ function initMap(locations) {
         google.maps.event.addListener(marker, 'click', function () {
             infoWindow.open(map, marker);
         });
+
     }
 }
-
-
-let beachButton = document.getElementById("beach-clubs");
-let vineyardButton = document.getElementById("vineyards");
-let restaurantsButton = document.getElementById("restaurant");
-let hotelButton = document.getElementById("hotels");
-let activitiesButton = document.getElementById("activites");
-
 
 //Event listener when clicking 'Beach' CTA
 document.getElementById("beach-clubs").addEventListener("click", function () {
@@ -265,4 +354,9 @@ document.getElementById("beach-clubs").addEventListener("click", function () {
 //Event listener when clicking 'Vineyard' CTA
 document.getElementById("vineyards").addEventListener("click", function () {
     initMap(vineyardLocations);
+});
+
+//Event listener when clicking 'Restaurant' CTA
+document.getElementById("restaurants").addEventListener("click", function () {
+    initMap(restaurantsLocations);
 });
