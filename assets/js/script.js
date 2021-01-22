@@ -1,8 +1,12 @@
 //Hides the following components when page is loaded
-$(".video-container").hide();
-$('#reco-para-1').hide();
-$('#reco-para-2').hide();
-$('#reco-para-3').hide();
+
+$(function () {
+    $(".video-container").hide();
+    $('#reco-para-1').hide();
+    $('#reco-para-2').hide();
+    $('#reco-para-3').hide();
+});
+
 
 /// Slideshow created following the Snook tutorial https://snook.ca/archives/javascript/simplest-jquery-slideshow using jQuery
 /// Creats a slideshow of images for the header
@@ -43,14 +47,14 @@ $(function () {
 
 //End of jQuery
 
-//Assigns scroll button to variable
-var scrollButton = document.getElementById("scroll-top");
-
 //Assigns the scroll function to window scroll
 window.onscroll = function () { scrollToTop() };
 
-//Function displays the button if the window is less than 40px from the top of the window, keeps it hidden if not
+//Function displays the button if the window is less than 40px 
 function scrollToTop() {
+
+    //Assigns scroll button to variable
+    var scrollButton = document.getElementById("scroll-top");
 
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
         scrollButton.style.display = "block";
@@ -66,9 +70,11 @@ function topOfPage() {
     document.documentElement.scrollTop = 0;
 };
 
+//Setting global variable for 'Watch Video' button
+let videoButton = document.getElementById("youtube-video");
+
 //Function changes text and colour of button when clicked for 'Watch Video CTA'
 function changeText() {
-    var videoButton = document.getElementById("youtube-video");
     if (videoButton.innerHTML === "Watch Video") {
         videoButton.innerHTML = "Hide Video";
         videoButton.classList.add("active");
@@ -76,11 +82,42 @@ function changeText() {
     else {
         videoButton.innerHTML = "Watch Video";
         videoButton.classList.remove("active");
-    };
+    }
 };
+
 //Event listener for when customer clicks on the 'watch video' cta
-document.getElementById("youtube-video").addEventListener("click", changeText);
+videoButton.addEventListener("click", function () {
+    changeText()
+});
 
+//Setting global variables for the recommendation buttons
+let reco1 = document.getElementById("reco-button-1");
+let reco2 = document.getElementById("reco-button-2");
+let reco3 = document.getElementById("reco-button-3");
 
+//Function that changes text and colour of button 
+function showDetails(reco) {
 
+    if (reco.innerHTML === "More Details") {
+        reco.innerHTML = "Hide Details";
+        reco.classList.add("active");
+    }
+    else {
+        reco.innerHTML = "More Details";
+        reco.classList.remove("active");
+    }
 
+};
+
+//Event listeners for the 'More Details' Buttons
+reco1.addEventListener("click", function () {
+    showDetails(reco1);
+});
+
+reco2.addEventListener("click", function () {
+    showDetails(reco2);
+});
+
+reco3.addEventListener("click", function () {
+    showDetails(reco3);
+});
