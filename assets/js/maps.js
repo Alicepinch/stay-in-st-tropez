@@ -308,6 +308,131 @@ var restaurantsLocations = [{
     <h6 class="info-heading">Salama</h6>
     <p class="info-text">Info text</p>
     </div>`
+}, {
+    //Le Pomme De Pin
+    coords: {
+        lat: 43.24759066207041,
+        lng: 6.662984513111073
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Le Pomme De Pin</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}];
+
+
+var hotelsLocations = [{
+    //Hotel La Garbine Ramatuelle | Séminaires À St Tropez
+    coords: {
+        lat: 43.25247476745094,
+        lng: 6.657577179680506
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Hotel La Garbine Ramatuelle | Séminaires À St Tropez</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //La Ferme d'Augustin Hôtel 4 étoiles
+    coords: {
+        lat: 43.24728588107085,
+        lng: 6.664014481210252
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">La Ferme d'Augustin Hôtel 4 étoiles</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Hotel Saint Vincent
+    coords: {
+        lat: 43.251161958453785,
+        lng: 6.658692978612329
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Hotel Saint Vincent</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //La Figuière
+    coords: {
+        lat: 43.25047428530443,
+        lng: 6.658263825177013
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">La Figuière</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Château de la Messardière
+    coords: {
+        lat: 43.25578792146569,
+        lng: 6.658177994489949
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Château de la Messardière</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Hôtel de Paris Saint-Tropez
+    coords: {
+        lat: 43.27066363622626,
+        lng: 6.636119507914687
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Hôtel de Paris Saint-Tropez</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Hôtel La Mandarine
+    coords: {
+        lat: 43.26616380347856,
+        lng: 6.648221634790609
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Hôtel La Mandarine</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Hotel Sezz Saint-tropez
+    coords: {
+        lat: 43.265538800398005,
+        lng: 6.669421814495238
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Hotel Sezz Saint-tropez</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Le Pre de la Mer
+    coords: {
+        lat: 43.265226296451345,
+        lng: 6.669078491746986
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Le Pre de la Mer</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+},
+{
+    //Muse Hotel Saint Tropez
+    coords: {
+        lat: 43.252662309283316,
+        lng: 6.6363769999758775
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Muse Hotel Saint Tropez</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+},
+{
+    //Hôtel Saint Amour La Tartane
+    coords: {
+        lat: 43.2636012500679,
+        lng: 6.6802364810652115
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Hôtel Saint Amour La Tartane</h6>
+    <p class="info-text">Info text</p>
+    </div>`
 }];
 
 //Google map API created following the guides from https://developers.google.com/maps/documentation/javascript/how-tos
@@ -325,6 +450,7 @@ function initMap(locations) {
     //For loop to iterate through all of the location markers
     for (var i = 0; i < locations.length; i++) {
         addMarker(locations[i]);
+        zoomToMarkers();
     }
 
     // Function with props paramater passed through to pull coords from array. 
@@ -342,6 +468,9 @@ function initMap(locations) {
         google.maps.event.addListener(marker, 'click', function () {
             infoWindow.open(map, marker);
         });
+    }
+
+    function zoomToMarkers() {
 
     }
 }
@@ -359,4 +488,9 @@ document.getElementById("vineyards").addEventListener("click", function () {
 //Event listener when clicking 'Restaurant' CTA
 document.getElementById("restaurants").addEventListener("click", function () {
     initMap(restaurantsLocations);
+});
+
+//Event listener when clicking 'Hotel' CTA
+document.getElementById("hotels").addEventListener("click", function () {
+    initMap(hotelsLocations);
 });
