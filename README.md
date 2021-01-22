@@ -1,45 +1,101 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Stay In St Tropez
 
-Welcome USER_NAME,
+Stay in St Tropez is a website designed to provide information to users who want to visit the area. The website aims to promote all of the different places and activities available in the tourist location. The website also aims to help regular visitors to the
+ 
+## UX
+ 
+### Strategy
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+### Scope 
 
-## Gitpod Reminders
+## Existing Features
+- Explore St Tropez section with Google Map API with buttons for customers to click through to explore different tourists locations to visit. 
+- Contact From - Contact form linking through to the emailJS API for users to get in contact if needed.
+- About Section with expandable video section
+- Top recommendations for restaurant, beach club and vineyard with expandable 'More details' section
+- One pager website - All content is on one page accessed via the navigation at the top of the page. 
+- Footer - simple footer with social media links. 
+- Simple navigation - Easy navigation with links to the different sections further down the page. 
+- Accessibility - Accessible links and appropriate alt attributes across the website.
+- 404 Page 
+- Scroll back to top button - As the page is a one pager, I have implemented a scroll to top page so that users can easily get back to the top of the page if needed. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Features Left to Implement
+- A subscription modal so users can sign up and recieve newsletters on all things St Tropez. 
 
-`python3 -m http.server`
+### Structure 
 
-A blue button should appear to click: *Make Public*,
+### Skeleton
 
-Another blue button should appear to click: *Open Browser*.
+### Surface
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Technologies Used
 
-A blue button should appear to click: *Make Public*,
+# Languages Used
 
-Another blue button should appear to click: *Open Browser*.
+- [JQuery](https://jquery.com)
+ - The project uses **JQuery** to simplify DOM manipulation.
+- Javascript 
+ - The project uses vanilla javascript to create an interactive website
+- HTML - The main structure of this website was built using HTML5
+- CSS - This project was styled using CSS
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+# Other tools used
 
-## Updates Since The Instructional Video
+- Google API's - This project uses google API's to pull in different locations for tourist hotspots in St Tropez
+ - https://developers.google.com/maps/documentation/javascript/examples - followed tutorials on how to implement
+- Font awesome - Used for the logos in the Visit us section and homepage.
+- Google fonts - To import "Roboto and Poppins font" to be used across the website.
+- Bootstrap - To help with creating a responsive website using their grid system.
+- Balsamiq - To create the wireframes for Desktop, Tablet and Phone.
+- Gimp - Used to resize images.
+- Tinypng - Ran all images through tinypng to compress.
+- W3Schools - For small code questions throughout the project.
+- Stackoverflow - Used to assist with small code questions. 
+- Coloors - Used to create the colour pallett.
+- freelogodesign - To create the logo for Stay In St Tropez.
+- Favicon generator - To convert the logo into a favicon.ico file.
+- Snook - Used to help with the slideshow at the top of the page. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Testing
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+All the testing carried out for Stay In St Tropez can be found here.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Deployment
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+This project was created in Gitpod workspaces and pushed to Github regularly. To deploy this project to github the process was:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- Open the 'Stay-in-st-tropez'repository on github
+- Go to settings
+- Scroll down to 'Github pages' section
+- Select the master branch as the source, save these changes.
+- After refreshing the page the repo is published and the URL is generated.
+- The Stay In St Tropez page can be accessed via: https://alicepinch.github.io/stay-in-st-tropez/
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Cloning:
+In order to clone a local copy of a repository to your computer you need to follow the following steps.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Click on the 'Code' button next to 'Add a file' when you have opened a repository
+- To clone your respository by https:// click on the clipboard icon next to the URL.
+- Once you have done this, open the terminal
+- The current directory will need to be changed to where you want your cloned directory.
+- Type 'git clone' and then paste in your URL from the earlier steps ($ git clone https://github.com/alicepinch/stay-in-st-tropez)
+- Press enter
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+More details can be found via the github doc https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository.
 
---------
+## Credits
 
-Happy coding!
+- 
+
+### Content
+
+- Content was writen by myself due to knowledge of the area and visiting many times. 
+
+### Media
+
+The photos used in this site were all copyright free and taken from the following websites:
+
+- https://www.rawpixel.com/
+- https://www.pexels.com/
+- https://unsplash.com/
