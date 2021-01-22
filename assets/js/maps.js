@@ -133,26 +133,6 @@ var beachLocations = [{
 }];
 
 var vineyardLocations = [{
-    //Mirabeau 
-    coords: {
-        lat: 43.37999485095804,
-        lng: 6.456866067455784
-    },
-    content: `<div class="info-window">
-    <h6 class="info-heading">Domain Mirabeau</h6>
-    <p class="info-text">Info text</p>
-    </div>`
-}, {
-    //Domaine des beaucas
-    coords: {
-        lat: 43.37000114135553,
-        lng: 6.569191898304937
-    },
-    content: `<div class="info-window">
-    <h6 class="info-heading">Domaine Des Beaucas</h6>
-    <p class="info-text">Info text</p>
-    </div>`
-}, {
     //Château Minuty
     coords: {
         lat: 43.246187427866225,
@@ -185,16 +165,54 @@ var vineyardLocations = [{
 }, {
     //Chateau Barbeyrolles
     coords: {
-        lat: 43.24143568423566, 
+        lat: 43.24143568423566,
         lng: 6.582634448094969
     },
     content: `<div class="info-window">
     <h6 class="info-heading">Chateau Barbeyrolles</h6>
     <p class="info-text">Info text</p>
     </div>`
+}, {
+    //Cave de Saint Tropez
+    coords: {
+        lat: 43.257049965208395,
+        lng: 6.644431137091388
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Cave de Saint Tropez</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Maison Angelvin
+    coords: {
+        lat: 43.260487882026055,
+        lng: 6.678076766373552
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Maison Angelvin</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Domaine Bertaud Belieu
+    coords: {
+        lat: 43.25529967830405,
+        lng: 6.597910904558934
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Domaine Bertaud Belieu</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Domaine La Rouillère - AOC Côtes de Provence
+    coords: {
+        lat: 43.239419778334785,
+        lng: 6.611901306393376
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Domaine La Rouillère - AOC Côtes de Provence</h6>
+    <p class="info-text">Info text</p>
+    </div>`
 }];
-
-
 
 //Google map API created following the guides from https://developers.google.com/maps/documentation/javascript/how-tos
 
@@ -202,7 +220,7 @@ function initMap(locations) {
 
     //mapOptions set as St Tropez Coordinates
     var mapOptions = {
-        zoom: 8,
+        zoom: 12,
         center: { lat: 43.22697421106884, lng: 6.606236091462182 },
     };
 
@@ -210,8 +228,7 @@ function initMap(locations) {
 
     //For loop to iterate through all of the location markers
     for (var i = 0; i < locations.length; i++) {
-        addMarker(locations[i]),
-            map.setZoom(10);
+        addMarker(locations[i]);
     }
 
     //Function with props paramater passed through to pull coords from the location array. 
@@ -222,30 +239,30 @@ function initMap(locations) {
             animation: google.maps.Animation.DROP,
         });
 
-        //If statement to check whether the array has a content property to display info window. 
-        if (props.content) {
-            var infoWindow = new google.maps.InfoWindow({
-                content: props.content,
-            });
+        var infoWindow = new google.maps.InfoWindow({
+            content: props.content,
+        });
 
-            google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.open(map, marker);
-            });
-        }
-
+        google.maps.event.addListener(marker, 'click', function () {
+            infoWindow.open(map, marker);
+        });
     }
 }
 
 
-//Event listener when clicking 'Beach'CTA
+let beachButton = document.getElementById("beach-clubs");
+let vineyardButton = document.getElementById("vineyards");
+let restaurantsButton = document.getElementById("restaurant");
+let hotelButton = document.getElementById("hotels");
+let activitiesButton = document.getElementById("activites");
+
+
+//Event listener when clicking 'Beach' CTA
 document.getElementById("beach-clubs").addEventListener("click", function () {
     initMap(beachLocations);
 });
 
-//Event listener when clicking 'Vineyard CTA
+//Event listener when clicking 'Vineyard' CTA
 document.getElementById("vineyards").addEventListener("click", function () {
     initMap(vineyardLocations);
-    
 });
-
-
