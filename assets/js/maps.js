@@ -440,6 +440,7 @@ var hotelsLocations = [{
 function initMap(locations) {
 
     //mapOptions set as St Tropez Coordinates
+
     var mapOptions = {
         zoom: 12,
         center: { lat: 43.22697421106884, lng: 6.606236091462182 },
@@ -447,30 +448,33 @@ function initMap(locations) {
 
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-    //For loop to iterate through all of the location markers
-    for (var i = 0; i < locations.length; i++) {
-        addMarker(locations[i]);
-        zoomToMarkers();
+    if (locations) {
+        for (var i = 0; i < locations.length; i++) {
+            var marker = new google.maps.Marker({
+                position: locations[i].coords,
+                map: map,
+                animation: google.maps.Animation.DROP,
+            });
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: locations[i].content,
+            });
+
+            marker.addListener('click', function () {
+                infoWindow.open(map, marker);
+
+            });
+        }
+
     }
+
+
 
     // Function with props paramater passed through to pull coords from array. 
+
     function addMarker(props) {
-        var marker = new google.maps.Marker({
-            position: props.coords,
-            map: map,
-            animation: google.maps.Animation.DROP,
-        });
 
-        var infoWindow = new google.maps.InfoWindow({
-            content: props.content,
-        });
 
-        google.maps.event.addListener(marker, 'click', function () {
-            infoWindow.open(map, marker);
-        });
-    }
-
-    function zoomToMarkers() {
 
     }
 }
