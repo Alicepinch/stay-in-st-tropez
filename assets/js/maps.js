@@ -443,7 +443,7 @@ function initMap(locations) {
 
     var mapOptions = {
         zoom: 12,
-        center: { lat: 43.22697421106884, lng: 6.606236091462182 },
+        center: { lat: 43.23223137004324, lng:6.648551015233651 },
     };
 
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -468,15 +468,6 @@ function initMap(locations) {
 
     }
 
-
-
-    // Function with props paramater passed through to pull coords from array. 
-
-    function addMarker(props) {
-
-
-
-    }
 }
 
 //Event listener when clicking 'Beach' CTA
