@@ -1,12 +1,22 @@
+ //Setting constant variables for buttons 
+const beachReco = document.getElementById("reco-button-1");
+const restaurantReco = document.getElementById("reco-button-2");
+const vineyardReco = document.getElementById("reco-button-3");
+const watchVideo = document.getElementById("youtube-video");
+const videoContainer = document.getElementsByClassName("video-container");
+const beachRecoPara = document.getElementById("reco-para-1");
+const restaurantRecoPara = document.getElementById("reco-para-2");
+const vineyardRecoPara = document.getElementById("reco-para-3");
+let pageHeight = 40;
+
 //Hides the following components when page is loaded
 
 $(function () {
-    $(".video-container").hide();
-    $('#reco-para-1').hide();
-    $('#reco-para-2').hide();
-    $('#reco-para-3').hide();
+    $(videoContainer).hide();
+    $(beachRecoPara).hide();
+    $(restaurantRecoPara).hide();
+    $(vineyardRecoPara).hide();
 });
-
 
 /// Slideshow created following the Snook tutorial https://snook.ca/archives/javascript/simplest-jquery-slideshow using jQuery
 /// Creats a slideshow of images for the header
@@ -27,20 +37,20 @@ $(function () {
 
 // Toggles content when button is clicked for youtube video and more details
 $(function () {
-    $("#youtube-video").click(function () {
-        $(".video-container").slideToggle();
+    $(watchVideo).click(function () {
+        $(videoContainer).slideToggle();
     });
 
-    $('#reco-button-1').click(function () {
-        $('#reco-para-1').slideToggle();
+    $(beachReco).click(function () {
+        $(beachRecoPara).slideToggle();
     });
 
-    $('#reco-button-2').click(function () {
-        $('#reco-para-2').slideToggle();
+    $(restaurantReco).click(function () {
+        $(restaurantRecoPara).slideToggle();
     });
 
-    $('#reco-button-3').click(function () {
-        $('#reco-para-3').slideToggle();
+    $(vineyardReco).click(function () {
+        $(vineyardRecoPara).slideToggle();
     });
 
 });
@@ -48,7 +58,9 @@ $(function () {
 //End of jQuery
 
 //Assigns the scroll function to window scroll
-window.onscroll = function () { scrollToTop() };
+window.onscroll = function () {
+    scrollToTop();
+}
 
 //Function displays the button if the window is less than 40px 
 function scrollToTop() {
@@ -56,7 +68,7 @@ function scrollToTop() {
     //Assigns scroll button to variable
     var scrollButton = document.getElementById("scroll-top");
 
-    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    if (document.body.scrollTop > pageHeight || document.documentElement.scrollTop > pageHeight) {
         scrollButton.style.display = "block";
     } else {
         scrollButton.style.display = "none";
@@ -70,54 +82,48 @@ function topOfPage() {
     document.documentElement.scrollTop = 0;
 };
 
-//Setting global variable for 'Watch Video' button
-let videoButton = document.getElementById("youtube-video");
 
 //Function changes text and colour of button when clicked for 'Watch Video CTA'
 function changeText() {
-    if (videoButton.innerHTML === "Watch Video") {
-        videoButton.innerHTML = "Hide Video";
-        videoButton.classList.add("active");
+    if (watchVideo.innerHTML === "Watch Video") {
+        watchVideo.innerHTML = "Hide Video";
+        watchVideo.classList.add("active");
     }
     else {
-        videoButton.innerHTML = "Watch Video";
-        videoButton.classList.remove("active");
+        watchVideo.innerHTML = "Watch Video";
+        watchVideo.classList.remove("active");
     }
 };
 
 //Event listener for when customer clicks on the 'watch video' cta
-videoButton.addEventListener("click", function () {
+watchVideo.addEventListener("click", function () {
     changeText()
 });
 
-//Setting global variables for the recommendation buttons
-let reco1 = document.getElementById("reco-button-1");
-let reco2 = document.getElementById("reco-button-2");
-let reco3 = document.getElementById("reco-button-3");
-
 //Function that changes text and colour of button 
-function showDetails(reco) {
+function showDetails(recommendation) {
 
-    if (reco.innerHTML === "More Details") {
-        reco.innerHTML = "Hide Details";
-        reco.classList.add("active");
+    if (recommendation.innerHTML === "More Details") {
+        recommendation.innerHTML = "Hide Details";
+        recommendation.classList.add("active");
     }
     else {
-        reco.innerHTML = "More Details";
-        reco.classList.remove("active");
+        recommendation.innerHTML = "More Details";
+        recommendation.classList.remove("active");
     }
 
 };
 
+
 //Event listeners for the 'More Details' Buttons
-reco1.addEventListener("click", function () {
-    showDetails(reco1);
+beachReco.addEventListener("click", function () {
+    showDetails(beachReco);
 });
 
-reco2.addEventListener("click", function () {
-    showDetails(reco2);
+restaurantReco.addEventListener("click", function () {
+    showDetails(restaurantReco);
 });
 
-reco3.addEventListener("click", function () {
-    showDetails(reco3);
+vineyardReco.addEventListener("click", function () {
+    showDetails(vineyardReco);
 });
