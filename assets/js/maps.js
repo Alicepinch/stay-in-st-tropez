@@ -1,6 +1,6 @@
 // Setting locations for the beach locations
 
-var beachLocations = [{
+const beachLocations = [{
     //Nikki Beach
     coords: {
         lat: 43.221006,
@@ -134,7 +134,7 @@ var beachLocations = [{
 
 //Vineyard Locations
 
-var vineyardLocations = [{
+const vineyardLocations = [{
     //Château Minuty
     coords: {
         lat: 43.246187427866225,
@@ -218,7 +218,7 @@ var vineyardLocations = [{
 
 //Restaurant locations
 
-var restaurantsLocations = [{
+const restaurantsLocations = [{
     //Senequier
     coords: {
         lat: 43.272405494824405,
@@ -321,7 +321,7 @@ var restaurantsLocations = [{
 }];
 
 
-var hotelsLocations = [{
+const hotelsLocations = [{
     //Hotel La Garbine Ramatuelle | Séminaires À St Tropez
     coords: {
         lat: 43.25247476745094,
@@ -441,22 +441,22 @@ function initMap(locations) {
 
     //mapOptions set as St Tropez Coordinates
 
-    var mapOptions = {
+    let mapOptions = {
         zoom: 12,
-        center: { lat: 43.23223137004324, lng:6.648551015233651 },
+        center: { lat: 43.23223137004324, lng: 6.648551015233651 },
     };
 
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    let map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
     if (locations) {
-        for (var i = 0; i < locations.length; i++) {
-            var marker = new google.maps.Marker({
+        for (let i = 0; i < locations.length; i++) {
+            let marker = new google.maps.Marker({
                 position: locations[i].coords,
                 map: map,
                 animation: google.maps.Animation.DROP,
             });
 
-            var infoWindow = new google.maps.InfoWindow({
+            let infoWindow = new google.maps.InfoWindow({
                 content: locations[i].content,
             });
 
@@ -469,6 +469,7 @@ function initMap(locations) {
     }
 
 }
+
 
 //Event listener when clicking 'Beach' CTA
 document.getElementById("beach-clubs").addEventListener("click", function () {
