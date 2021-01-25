@@ -74,15 +74,7 @@
                             quod adipisci
                             officiis, in numquam. Molestiae, aspernatur!Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Nostrum aliquam consectetur laudantium asperiores iste similique harum
-                            labore, nulla ad assumenda ratione ab dolorem quod adipisci
-                            officiis, in numquam. Molestiae, aspernatur!Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Nostrum aliquam consectetur
-                            laudantium asperiores iste similique harum labore, nulla ad assumenda ratione ab dolorem
-                            quod adipisci
-                            officiis, in numquam. Molestiae, aspernatur!Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Nostrum aliquam consectetur audantium asperiores iste similique harum
-                            labore, nulla ad assumenda ratione ab dolorem quod adipisci
-                            officiis, in numquam. Molestiae, aspernatur!</p>
+                            labore, nulla ad assumenda ratione ab dolorem quod adipisci.</p>
 
                         <button id="youtube-video">Watch Video</button>
 
@@ -150,9 +142,6 @@
                         <h2>Top Recommendations</h2>
                         <p> There are so many places to visit in St Tropez and it can be hard to choose where to go. We have put together our top 3 favourite places that you need</p>
 
-
-                        <!----Beach Club Recommendations---->
-
                         <div class="row justify-content-around">
                             <div class="recommendation col-12 col-lg-4">
                                 <h4>La Pomme de Pin</h4>
@@ -210,7 +199,7 @@
                         <h2>Contact</h2>
                         <p>Get in contact with us with any questions you have about visiting St Tropez!</p>
 
-                        <form method="POST">
+                        <form onsubmit="return sendMail(this)">
                             <div class="row">
                                 <div class="form-input col-12 col-md-6">
                                     <input class="form-field" type="text" id="fname" placeholder="First Name"
@@ -282,6 +271,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA3oFi2xWxvfCrm97hfyE-1OjIyfFG1Ig&callback=initMap"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
     <script src="assets/js/maps.js" type="text/javascript"></script>
+    <script src="assets/js/contact.js" type="text/javascript"></script>
 </body>
 
 </html>
