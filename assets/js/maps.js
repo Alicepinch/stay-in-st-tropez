@@ -1,4 +1,6 @@
-// Setting locations for the beach locations
+// Setting const variables for locations
+
+//Beach Locations 
 
 const beachLocations = [{
     //Nikki Beach
@@ -320,6 +322,7 @@ const restaurantsLocations = [{
     </div>`
 }];
 
+//Hotels locations
 
 const hotelsLocations = [{
     //Hotel La Garbine Ramatuelle | Séminaires À St Tropez
@@ -439,16 +442,20 @@ const hotelsLocations = [{
 
 function initMap(locations) {
 
-    //mapOptions set as St Tropez Coordinates
+    //Set lat and lng for St Tropez
+
+    const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
 
     let mapOptions = {
         zoom: 12,
-        center: { lat: 43.23223137004324, lng: 6.648551015233651 },
+        center: stTropez
     };
 
     let map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
     if (locations) {
+
+        // For loop to loop through all the locations
         for (let i = 0; i < locations.length; i++) {
             let marker = new google.maps.Marker({
                 position: locations[i].coords,
@@ -456,20 +463,18 @@ function initMap(locations) {
                 animation: google.maps.Animation.DROP,
             });
 
+            //Create infoWindow for the content in the locations arrays
             let infoWindow = new google.maps.InfoWindow({
                 content: locations[i].content,
             });
 
-            marker.addListener('click', function () {
+            google.maps.event.addListener(marker, 'click', function () {
                 infoWindow.open(map, marker);
-
             });
         }
 
     }
-
 }
-
 
 //Event listener when clicking 'Beach' CTA
 document.getElementById("beach-clubs").addEventListener("click", function () {
