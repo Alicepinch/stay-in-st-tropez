@@ -45,6 +45,7 @@ a:hover {
     transition: all 200ms ease-in-out;
 }
 
+
 /* Navigation and Logo */
 
 #company-logo {
@@ -109,8 +110,17 @@ a:hover {
     max-width: 70%;
 }
 
-.introduction-container, .contact-container h2 {
+.introduction-container p {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.introduction-container, .contact-container, .locations-container h2 {
     padding-bottom: .5rem;
+}
+
+.video-container {
+    padding-bottom: 1rem;
 }
 
 .video-container iframe {
@@ -122,9 +132,6 @@ a:hover {
     text-align: center;
 }
 
-.locations-container h2 {
-    padding-bottom: .5rem;
-}
 
 .recommendation h4 {
     margin: 0;
@@ -132,19 +139,19 @@ a:hover {
 
 /* Button Styling */
 
-button {
+.button-purple, .map-button {
     background-color:#9882b3;
     color: #fff;
     padding: .5rem 1rem .5rem 1rem;
     border-radius: 30px;
     border: #B7A3D0;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     transition: all 300ms ease-in;
     outline: none !important;
 }
 
-button:hover, .active {
+.button-purple:hover, .active {
     background-color: #897261;
     color: #fff;
 }
