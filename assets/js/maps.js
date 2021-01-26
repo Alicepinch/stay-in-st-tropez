@@ -1,7 +1,7 @@
 // Setting variables to be used in functions
 const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
 const pampellone = { lat: 43.22816264096342, lng: 6.649391087955331 };
-const cogolin = { lat: 43.270486833680145, lng: 6.544334326011887 };
+const cogolin = { lat: 43.25811227628343, lng: 6.609622630343837 };
 const stTropezTown = { lat: 43.253986592356014, lng: 6.651336343911749 };
 const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 }
 let mapOptions;
@@ -445,10 +445,9 @@ const hotelsLocations = [{
     </div>`
 }];
 
-
-
 //Google map API created following the guides from https://developers.google.com/maps/documentation/javascript/how-tos
 
+// Init map is the first map users will see
 function initMap(locations) {
 
     mapOptions = {
@@ -460,6 +459,38 @@ function initMap(locations) {
 
 }
 
+//Function to loop through all markers to be called for each location
+function addMarker(locations) {
+
+    if (locations) {
+        // For loop to loop through all the locations
+        for (let i = 0; i < locations.length; i++) {
+            let marker = new google.maps.Marker({
+                position: locations[i].coords,
+                map: map,
+                animation: google.maps.Animation.DROP,
+            });
+
+            //Create infoWindow for the content in the locations arrays
+            let infoWindow = new google.maps.InfoWindow({
+                content: locations[i].content,
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(map, marker);
+                if (currWindow != null) {
+                    currWindow.close();
+                }
+                infoWindow.open(map, marker);
+                currWindow = infoWindow;
+            });
+
+            var currWindow = null;
+        }
+    }
+}
+
+//Map displayed when clicked on the "Beaches" Button
 function initMapBeach(locations) {
 
     mapOptions = {
@@ -469,28 +500,9 @@ function initMapBeach(locations) {
 
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-    if (locations) {
-        // For loop to loop through all the locations
-        for (let i = 0; i < locations.length; i++) {
-            let marker = new google.maps.Marker({
-                position: locations[i].coords,
-                map: map,
-                animation: google.maps.Animation.DROP,
-            });
-
-            //Create infoWindow for the content in the locations arrays
-            let infoWindow = new google.maps.InfoWindow({
-                content: locations[i].content,
-            });
-
-            google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.open(map, marker);
-            });
-        }
-
-    }
 }
 
+//Map displayed when clicked on the "Vineyards" Button
 function initMapVineyards(locations) {
 
     mapOptions = {
@@ -500,28 +512,9 @@ function initMapVineyards(locations) {
 
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-    if (locations) {
-        // For loop to loop through all the locations
-        for (let i = 0; i < locations.length; i++) {
-            let marker = new google.maps.Marker({
-                position: locations[i].coords,
-                map: map,
-                animation: google.maps.Animation.DROP,
-            });
-
-            //Create infoWindow for the content in the locations arrays
-            let infoWindow = new google.maps.InfoWindow({
-                content: locations[i].content,
-            });
-
-            google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.open(map, marker);
-            });
-        }
-
-    }
 }
 
+//Map displayed when clicked on the "Restaurants" Button
 function initMapRestaurants(locations) {
 
     mapOptions = {
@@ -531,29 +524,9 @@ function initMapRestaurants(locations) {
 
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-    if (locations) {
-
-        // For loop to loop through all the locations
-        for (let i = 0; i < locations.length; i++) {
-            let marker = new google.maps.Marker({
-                position: locations[i].coords,
-                map: map,
-                animation: google.maps.Animation.DROP,
-            });
-
-            //Create infoWindow for the content in the locations arrays
-            let infoWindow = new google.maps.InfoWindow({
-                content: locations[i].content,
-            });
-
-            google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.open(map, marker);
-            });
-        }
-
-    }
 }
 
+//Map displayed when clicked on the "Hotels" Button
 function initMapHotels(locations) {
 
     mapOptions = {
@@ -562,47 +535,28 @@ function initMapHotels(locations) {
     };
 
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-    if (locations) {
-        // For loop to loop through all the locations
-        for (let i = 0; i < locations.length; i++) {
-            let marker = new google.maps.Marker({
-                position: locations[i].coords,
-                map: map,
-                animation: google.maps.Animation.DROP,
-            });
-
-            //Create infoWindow for the content in the locations arrays
-            let infoWindow = new google.maps.InfoWindow({
-                content: locations[i].content,
-            });
-
-            google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.open(map, marker);
-            });
-        }
-
-    }
 }
-
-
 
 //Event listener when clicking 'Beach' CTA
 document.getElementById("beach-clubs").addEventListener("click", function () {
     initMapBeach(beachLocations);
+    addMarker(beachLocations);
 });
 
 //Event listener when clicking 'Vineyard' CTA
 document.getElementById("vineyards").addEventListener("click", function () {
     initMapVineyards(vineyardLocations);
+    addMarker(vineyardLocations);
 });
 
 //Event listener when clicking 'Restaurant' CTA
 document.getElementById("restaurants").addEventListener("click", function () {
     initMapRestaurants(restaurantsLocations);
+    addMarker(restaurantsLocations);
 });
 
 //Event listener when clicking 'Hotel' CTA
 document.getElementById("hotels").addEventListener("click", function () {
     initMapHotels(hotelsLocations);
+    addMarker(hotelsLocations);
 });
