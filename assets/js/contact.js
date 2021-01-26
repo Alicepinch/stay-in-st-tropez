@@ -9,7 +9,7 @@ function sendMail(contactForm) {
         "subject": contactForm.subject.value,
     })
         .then(
-            
+
             //Function changes the submit button when form submitted alerts user
             function () {
                 submitButton.innerHTML = "Message Sent!";
@@ -29,7 +29,6 @@ function sendMail(contactForm) {
     document.getElementById("lname").value = "";
     document.getElementById("subject").value = "";
     document.getElementById("message").value = "";
-    submitButton.classList.remove("active");
 
     return false;
 }
