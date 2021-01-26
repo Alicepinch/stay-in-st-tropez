@@ -210,6 +210,17 @@ a:hover {
     margin: 0;
 }
 
+.more-details {
+    padding-top: 1rem;
+}
+
+.more-details li {
+    list-style-type: none;
+    color: #6e6e77;
+    font-style: "Roboto", sans-serif;
+    padding-top: .5rem;
+}
+
 /* Contact form */
 
 .form-field-name {
