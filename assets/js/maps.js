@@ -144,6 +144,24 @@ const beachLocations = [{
 //Vineyard Locations
 
 const vineyardLocations = [{
+    //Domaine des Beaucas
+    coords: {
+        lat: 43.36874546377021, lng: 6.569942916534111
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Domaine des Beaucas</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
+    //Domaine Mirabeau
+    coords: {
+        lat: 43.39895631610248, lng: 6.47609213097163
+    },
+    content: `<div class="info-window">
+    <h6 class="info-heading">Domaine Mirabeau</h6>
+    <p class="info-text">Info text</p>
+    </div>`
+}, {
     //Château Minuty
     coords: {
         lat: 43.246187427866225,
