@@ -1,7 +1,7 @@
 // Setting variables to be used in functions
 const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
 const pampellone = { lat: 43.22816264096342, lng: 6.649391087955331 };
-const cogolin = { lat: 43.25811227628343, lng: 6.609622630343837 };
+const cogolin = { lat: 43.305768388687284, lng: 6.557175604097107 };
 const stTropezTown = { lat: 43.253986592356014, lng: 6.651336343911749 };
 const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 }
 let mapOptions;
@@ -524,7 +524,7 @@ function initMapBeach(locations) {
 function initMapVineyards(locations) {
 
     mapOptions = {
-        zoom: 12,
+        zoom: 11,
         center: cogolin
     };
 
