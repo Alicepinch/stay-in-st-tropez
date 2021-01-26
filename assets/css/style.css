@@ -158,6 +158,11 @@ a:hover {
     color: #fff;
 }
 
+.map-button:hover {
+    background-color: #897261;
+    color: #fff;
+}
+
 #scroll-top {
     display: none;
     position: fixed;
@@ -206,6 +211,17 @@ a:hover {
 }
 
 /* Contact form */
+
+.form-field-name {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
 .form-input {
     margin-bottom: 1rem;
@@ -259,6 +275,11 @@ input:focus, textarea:focus {
 .video-container iframe {
     height: 100%;
     width: 100%;
+}
+
+.introduction-container p {
+    margin-left: 0rem;
+    margin-right: 0rem;
 }
 
 .recommendation button {
