@@ -30,7 +30,7 @@ h6 {
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #6e6e77;
+  color: #676b70;
   font-size: 17px;
 }
 
@@ -216,7 +216,7 @@ a:hover {
 
 .more-details li {
     list-style-type: none;
-    color: #6e6e77;
+    color: #676b70;
     font-style: "Roboto", sans-serif;
     padding-top: .5rem;
 }
@@ -240,7 +240,7 @@ a:hover {
 
 .form-field {
     width: 100%;
-    border: 1px solid #6e6e77;
+    border: 1px solid #676b70;
     border-radius: 20px;
     padding: .5rem;
     font-family: "Roboto", sans-serif;
@@ -264,7 +264,7 @@ input:focus, textarea:focus {
 }
 
 .social-networks i {
-    color: #6e6e77;
+    color: #676b70;
     font-size: 2em;
     padding-bottom: 1rem;
     padding-left: 1rem;
