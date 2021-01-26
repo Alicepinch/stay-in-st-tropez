@@ -1,7 +1,14 @@
+// Setting variables to be used in functions
+const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
+const pampellone = { lat: 43.22816264096342, lng: 6.649391087955331 };
+const cogolin = { lat: 43.270486833680145, lng: 6.544334326011887 };
+const stTropezTown = { lat: 43.253986592356014, lng: 6.651336343911749 };
+const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 }
+let mapOptions;
+let map;
+
 // Setting const variables for locations
-
 //Beach Locations 
-
 const beachLocations = [{
     //Nikki Beach
     coords: {
@@ -438,20 +445,91 @@ const hotelsLocations = [{
     </div>`
 }];
 
+
+
 //Google map API created following the guides from https://developers.google.com/maps/documentation/javascript/how-tos
 
 function initMap(locations) {
 
-    //Set lat and lng for St Tropez
-
-    const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
-
-    let mapOptions = {
+    mapOptions = {
         zoom: 12,
         center: stTropez
     };
 
-    let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+}
+
+function initMapBeach(locations) {
+
+    mapOptions = {
+        zoom: 13,
+        center: pampellone
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    if (locations) {
+        // For loop to loop through all the locations
+        for (let i = 0; i < locations.length; i++) {
+            let marker = new google.maps.Marker({
+                position: locations[i].coords,
+                map: map,
+                animation: google.maps.Animation.DROP,
+            });
+
+            //Create infoWindow for the content in the locations arrays
+            let infoWindow = new google.maps.InfoWindow({
+                content: locations[i].content,
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(map, marker);
+            });
+        }
+
+    }
+}
+
+function initMapVineyards(locations) {
+
+    mapOptions = {
+        zoom: 12,
+        center: cogolin
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    if (locations) {
+        // For loop to loop through all the locations
+        for (let i = 0; i < locations.length; i++) {
+            let marker = new google.maps.Marker({
+                position: locations[i].coords,
+                map: map,
+                animation: google.maps.Animation.DROP,
+            });
+
+            //Create infoWindow for the content in the locations arrays
+            let infoWindow = new google.maps.InfoWindow({
+                content: locations[i].content,
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(map, marker);
+            });
+        }
+
+    }
+}
+
+function initMapRestaurants(locations) {
+
+    mapOptions = {
+        zoom: 13,
+        center: stTropezTown
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
     if (locations) {
 
@@ -476,22 +554,55 @@ function initMap(locations) {
     }
 }
 
+function initMapHotels(locations) {
+
+    mapOptions = {
+        zoom: 13,
+        center: hotels
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    if (locations) {
+        // For loop to loop through all the locations
+        for (let i = 0; i < locations.length; i++) {
+            let marker = new google.maps.Marker({
+                position: locations[i].coords,
+                map: map,
+                animation: google.maps.Animation.DROP,
+            });
+
+            //Create infoWindow for the content in the locations arrays
+            let infoWindow = new google.maps.InfoWindow({
+                content: locations[i].content,
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(map, marker);
+            });
+        }
+
+    }
+}
+
+
+
 //Event listener when clicking 'Beach' CTA
 document.getElementById("beach-clubs").addEventListener("click", function () {
-    initMap(beachLocations);
+    initMapBeach(beachLocations);
 });
 
 //Event listener when clicking 'Vineyard' CTA
 document.getElementById("vineyards").addEventListener("click", function () {
-    initMap(vineyardLocations);
+    initMapVineyards(vineyardLocations);
 });
 
 //Event listener when clicking 'Restaurant' CTA
 document.getElementById("restaurants").addEventListener("click", function () {
-    initMap(restaurantsLocations);
+    initMapRestaurants(restaurantsLocations);
 });
 
 //Event listener when clicking 'Hotel' CTA
 document.getElementById("hotels").addEventListener("click", function () {
-    initMap(hotelsLocations);
+    initMapHotels(hotelsLocations);
 });
