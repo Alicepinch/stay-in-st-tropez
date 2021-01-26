@@ -296,5 +296,10 @@ input:focus, textarea:focus {
 .recommendation button {
     margin-bottom: 1rem;
 }
+
+.locations-container p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 }
 
