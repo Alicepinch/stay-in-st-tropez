@@ -123,9 +123,12 @@ a:hover {
     padding-bottom: 1rem;
 }
 
+/* .video-container */
+
 .video-container iframe {
     height: 40vh;
     width: 35vw;
+    padding-bottom: 1rem;
 }
 
 .locations-container {
@@ -274,6 +277,14 @@ input:focus, textarea:focus {
 
 .introduction-container, .contact-container, .recommendations-container {
     max-width: 90%;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 .video-container iframe {
