@@ -206,7 +206,7 @@ a:hover {
 }
 
 .more-details {
-    padding-top: 1rem;
+    padding-top: .5rem;
 }
 
 .more-details li {
@@ -292,6 +292,10 @@ h3 {
 
 p  {
     font-size: 15px;
+}
+
+.more-details {
+    padding-top: 0rem;
 }
 
 button {
