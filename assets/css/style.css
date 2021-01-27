@@ -156,7 +156,7 @@ a:hover {
     color: #fff;
 }
 
-.map-button:hover {
+.map-button:hover, .map-button:focus {
     background-color: #897261;
     color: #fff;
 }
@@ -172,7 +172,7 @@ a:hover {
     font-size: 1.5rem;
 }
 
-/* Map */
+/* Google  */
 
 #map {
     margin-top: 1rem;
@@ -189,7 +189,7 @@ a:hover {
     font-size: 16px;
 }
 
-/* Recommendations */
+/* Top Recommendations */
 
 .recommendation img {
     width: 100%;
