@@ -107,7 +107,7 @@ a:hover {
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    max-width: 60%;
+    max-width: 70%;
 }
 
 .introduction-container p {
@@ -130,11 +130,7 @@ a:hover {
 
 .locations-container {
     text-align: center;
-}
-
-
-.recommendation h4 {
-    margin: 0;
+    max-width: 70%;
 }
 
 /* Button Styling */
@@ -191,6 +187,10 @@ a:hover {
 
 /* Top Recommendations */
 
+.recommendation h4 {
+    margin: 0;
+}
+
 .recommendation img {
     width: 100%;
     height: 30vh;
@@ -201,11 +201,6 @@ a:hover {
 .recommendation button{
     margin-top: 1rem;
     margin-bottom: 0;
-}
-
-.recommendation p  {
-    padding: 1rem;
-    margin: 0;
 }
 
 .more-details {
