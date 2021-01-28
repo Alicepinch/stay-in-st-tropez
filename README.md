@@ -2,6 +2,8 @@
 
 [Stay In St Tropez Live site](https://alicepinch.github.io/stay-in-st-tropez/)
 
+![Ami Responsive](docs/readme/stay-in-st-tropez-ami-responsive.jpg)
+
 Stay in St Tropez is a website designed to provide information to users who want to visit the area. The website aims to promote all of the different places and activities available in the tourist location. 
  
 ## User Experience 
@@ -12,10 +14,10 @@ The UX goal for this website is to provide users with information about St Trope
 
 #### User stories:
 
-- As a user I would like to Explore the different Restaurants I can visit. 
-- As a user I would like to Explore the different Beachs I can visit.
-- As a user I would like to Explore the different Vineyards I can visit.
-- As a user I would like to Explore the different Hotels I can stay if I visit.
+- As a user I would like to explore the different Restaurants I can visit. 
+- As a user I would like to explore the different Beachs I can visit.
+- As a user I would like to explore the different Vineyards I can visit.
+- As a user I would like to explore the different Hotels I can stay if I visit.
 - As a user I would like to be able to get in contact in case of further questions/information.
 - As a user I would like to get a vibe of the area and gain some basic background information.
 
@@ -50,9 +52,7 @@ The site will be built using just one page so a user can navigate through to the
 
 ### Skeleton
 
-This website will be built with desktop in mind however it will be optimized for other devices.
-
-Wireframes were created using balsamiq:
+This website will be built with desktop in mind however it will be optimized for other devices. Wireframes were created using balsamiq:
 
 ![WireFrame](docs/readme/stay-in-st-tropez-wireframes.png)
 
@@ -111,7 +111,7 @@ Simple footer implemented with social links.
 
 This website is responsive and can be used across web browsers and different device sizes. Max-width was used for the different component sections to ensure that this could be scaled up as well as down correctly. 
 
-#### Future Features Left to Implement
+#### Future Features
 
 - A subscription modal so users can sign up and recieve newsletters on all things St Tropez. 
 - An option for customers to switch between French content and English content.
@@ -128,10 +128,9 @@ This website is responsive and can be used across web browsers and different dev
   - The main structure of this website was built using HTML5
 - CSS 
   - This project was styled using CSS
-- [Google map API's]()
+- [Google map API's](https://developers.google.com/maps/documentation/javascript/examples)
   - This project used Google map API's to implement an interactive map.
-- EmailJS API
-  - [EmailJS]() 
+- [EmailJS API](https://emailjs.com/) 
    - emailJS was used to link any user inquiries through to an email.
 
 ### Other tools used
@@ -185,7 +184,7 @@ The google map API's were created following the google map tutorials available h
 
 ### Content
 
-- Content was mostly writen by myself due to visiting the area many times with the help of wikipidea and google maps.
+- Content was mostly writen by myself from visiting the area many times with the help of wikipidea and google maps.
 
 ### Media
 
