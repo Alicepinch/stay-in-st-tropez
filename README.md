@@ -2,7 +2,7 @@
 
 [Stay In St Tropez Live site](https://alicepinch.github.io/stay-in-st-tropez/)
 
-![Ami Responsive](docs/readme/stay-in-st-tropez-ami-responsive.jpg)
+![Ami Responsive](/docs/readme/stay-in-st-tropez-ami-responsive.jpg)
 
 Stay in St Tropez is a website designed to provide information to users who want to visit the area. The website aims to promote all of the different places and activities available in the tourist location. 
  
