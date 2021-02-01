@@ -115,7 +115,7 @@ This website is responsive and can be used across web browsers and different dev
 
 - A subscription modal so users can sign up and recieve newsletters on all things St Tropez. 
 - An option for customers to switch between French content and English content.
-- Different recommendations appearing depending on which button was clicked in the 'Explore' area (This was outlined in planned features however there was no time to implement this so would be a future feature)
+- Different recommendations appearing depending on which button was clicked in the 'Explore' area (This was outlined in planned features however there was no time to implement this so it would be a future feature)
 - A list of all locations next to the map when the buttons are clicked so the information is clear.
 
 ## Technologies Used
@@ -150,6 +150,7 @@ This website is responsive and can be used across web browsers and different dev
 - [Snook](https://snook.ca/archives/javascript/simplest-jquery-slideshow) - Used to help with the slideshow at the top of the page. 
 - [JShint](https://jshint.com/) - To test javascript.
 - [W3cValidator](https://validator.w3.org/) - Used to check HTML and css for any issues.
+- [Free formatter](https://www.freeformatter.com/css-beautifier.html#ad-output) - Used to beautify CSS code.
 
 ## Testing
 
