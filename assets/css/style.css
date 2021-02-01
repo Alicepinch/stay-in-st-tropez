@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
 * {
-    margin:0; 
-    padding: 0;
-    border: 0;
-} 
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
 
 body {
-    background-color: #f0f0e5;
+	background-color: #f0f0e5;
 }
+
 
 /* Heading and Text styling for whole page */
 
 h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
 }
 
 h2,
@@ -22,302 +22,306 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  color: #886ead;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	color: #886ead;
 }
 
 h2 {
-    padding-bottom: .5rem;
+	padding-bottom: .5rem;
 }
 
 p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #676b70;
-  font-size: 17px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	color: #676b70;
+	font-size: 17px;
 }
 
 a {
-  color: #9882b3;
-  font-weight: 500;
+	color: #9882b3;
+	font-weight: 500;
 }
 
 a:hover {
-    text-decoration: none;
-    color: #897261;
-    transition: all 200ms ease-in-out;
+	text-decoration: none;
+	color: #897261;
+	transition: all 200ms ease-in-out;
 }
 
 
 /* Navigation and Logo */
 
 #company-logo {
-    padding-top: 1rem;
-    height: 70px;
+	padding-top: 1rem;
+	height: 70px;
 }
 
 #company-name {
-    padding: .5rem;
-    margin: 0;
-    text-transform: uppercase;
-    color: #6e6e77;
+	padding: .5rem;
+	margin: 0;
+	text-transform: uppercase;
+	color: #6e6e77;
 }
 
 .navigation-bar {
-    padding-bottom: .5rem;
+	padding-bottom: .5rem;
 }
 
 .nav-item {
-    color: #886ead;
-    font-size: 1.2em;
-    font-family:"Poppins", sans-serif;
-    padding: 1rem;
+	color: #886ead;
+	font-size: 1.2em;
+	font-family: "Poppins", sans-serif;
+	padding: 1rem;
 }
 
 .nav-item:hover {
-    color: #897261;
-    text-decoration: none;
+	color: #897261;
+	text-decoration: none;
 }
+
 
 /* Hero Image SlideShow styling borrowed from adjusted https://snook.ca/archives/javascript/simplest-jquery-slideshow */
 
 .slideshow-container {
-    position: relative;
-    height: 700px;
+	position: relative;
+	height: 700px;
 }
 
 .slideshow {
-  overflow: hidden;
-  width: 100%;
-  height: 700px;
+	overflow: hidden;
+	width: 100%;
+	height: 700px;
 }
 
 .slideshow img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  position: absolute; 
-  left:0; 
-  top:0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
+
 
 /* Containers */
 
-.introduction-container, .contact-container, .recommendations-container {
-    background-color: white;
-    border-radius: 20px;
-    padding: 3rem;
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    max-width: 80%;
-}
-
-.introduction-container p {
-    margin-left: 4rem;
-    margin-right: 4rem;
+.introduction-container,
+.contact-container,
+.recommendations-container {
+	background-color: white;
+	border-radius: 20px;
+	padding: 3rem;
+	text-align: center;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	max-width: 80%;
 }
 
 .video-container {
-    padding-bottom: 1rem;
+	padding-bottom: 1rem;
 }
 
 .video-container iframe {
-    height: 40vh;
-    width: 35vw;
-    padding-bottom: 1rem;
+	height: 40vh;
+	width: 35vw;
+	padding-bottom: 1rem;
 }
 
 .locations-container {
-    text-align: center;
-    max-width: 80%;
+	text-align: center;
+	max-width: 80%;
 }
+
 
 /* Button Styling */
 
-.button-purple, .map-button {
-    background-color:#886ead;
-    color: #fff;
-    padding: .5rem 1rem .5rem 1rem;
-    border-radius: 30px;
-    border: #B7A3D0;
-    margin-bottom: 1rem;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    transition: all 300ms ease-in;
-    outline: none !important;
+.button-purple,
+.map-button {
+	background-color: #886ead;
+	color: #fff;
+	padding: .5rem 1rem .5rem 1rem;
+	border-radius: 30px;
+	border: #B7A3D0;
+	margin-bottom: 1rem;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+	transition: all 300ms ease-in;
+	outline: none !important;
 }
 
-.button-purple:hover, .active {
-    background-color: #897261;
-    color: #fff;
+.button-purple:hover,
+.active {
+	background-color: #897261;
+	color: #fff;
 }
 
-.map-button:hover, .map-button:focus {
-    background-color: #897261;
-    color: #fff;
+.map-button:hover,
+.map-button:focus {
+	background-color: #897261;
+	color: #fff;
 }
 
 #scroll-top {
-    display: none;
-    position: fixed;
-    bottom: 15px;
-    right: 20px;
-    z-index: 1;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-size: 1.5rem;
+	display: none;
+	position: fixed;
+	bottom: 15px;
+	right: 20px;
+	z-index: 1;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	font-size: 1.5rem;
 }
+
 
 /* Google  */
 
 #map {
-    margin-top: 1rem;
-    min-height: 600px;
-    width: 100%;
+	margin-top: 1rem;
+	min-height: 600px;
+	width: 100%;
 }
 
 .info-heading {
-    color: #897261;
+	color: #897261;
 }
 
 .info-text {
-    margin-bottom: 0;
-    font-size: 13px;
+	margin-bottom: 0;
+	font-size: 13px;
 }
+
 
 /* Top Recommendations */
 
 .recommendation h4 {
-    margin: 0;
+	margin: 0;
 }
 
 .recommendation img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
 }
 
-.recommendation button{
-    margin-top: 1rem;
-    margin-bottom: .5rem;
+.recommendation button {
+	margin-top: 1rem;
+	margin-bottom: .5rem;
 }
 
 .more-details {
-    padding-top: .5rem;
+	padding-top: .5rem;
 }
 
 .more-details li {
-    list-style-type: none;
-    color: #676b70;
-    font-family: "Roboto", sans-serif;
-    padding-top: .5rem;
+	list-style-type: none;
+	color: #676b70;
+	font-family: "Roboto", sans-serif;
+	padding-top: .5rem;
 }
+
 
 /* Contact form */
 
 .form-field-name {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 .form-input {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .form-field {
-    width: 100%;
-    border: 1px solid #676b70;
-    border-radius: 20px;
-    padding: .5rem;
-    font-family: "Roboto", sans-serif;
-} 
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #897261;
-    box-shadow: 0 0 10px #897261;
+	width: 100%;
+	border: 1px solid #676b70;
+	border-radius: 20px;
+	padding: .5rem;
+	font-family: "Roboto", sans-serif;
 }
+
+input:focus,
+textarea:focus {
+	outline: none;
+	border-color: #897261;
+	box-shadow: 0 0 10px #897261;
+}
+
 
 /* Footer */
 
 .social-networks {
-    text-align: center;
+	text-align: center;
 }
 
 .social-networks li {
-    display: inline;
-    text-decoration: none;
+	display: inline;
+	text-decoration: none;
 }
 
 .social-networks i {
-    color: #676b70;
-    font-size: 2em;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+	color: #676b70;
+	font-size: 2em;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 .social-networks i:hover {
-    color: #886ead;
+	color: #886ead;
 }
 
-/* Media Queries */ 
+
+/* Media Queries */
 
 @media screen and (max-width: 767px) {
-
-.introduction-container, .contact-container, .recommendations-container {
-    max-width: 90%;
+	.introduction-container,
+	.contact-container,
+	.recommendations-container {
+		max-width: 90%;
+	}
+	.locations-container {
+		max-width: 90%;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		font-size: 1.3rem;
+	}
+	p {
+		font-size: 15px;
+	}
+	.more-details {
+		padding-top: 0rem;
+	}
+	button {
+		font-size: 15px;
+	}
+	.video-container iframe {
+		height: 100%;
+		width: 100%;
+	}
+	.introduction-container p {
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.recommendation button {
+		margin-bottom: 1rem;
+	}
+	.locations-container p {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
 }
 
-.locations-container {
-    max-width: 90%;
+@media screen and (min-width: 768px) {
+	.recommendation button {
+		margin-bottom: 1rem;
+	}
 }
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1.3rem;
-}
-
-p  {
-    font-size: 15px;
-}
-
-.more-details {
-    padding-top: 0rem;
-}
-
-button {
-    font-size: 15px;
-}
-
-.video-container iframe {
-    height: 100%;
-    width: 100%;
-}
-
-.introduction-container p {
-    margin-left: 0rem;
-    margin-right: 0rem;
-}
-
-.recommendation button {
-    margin-bottom: 1rem;
-}
-
-.locations-container p {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-}
-
