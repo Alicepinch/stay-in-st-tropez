@@ -130,13 +130,13 @@
                             <button class="map-button" id="beach-clubs">Beach Clubs</button>
                         </div>
                         <div class="col-6 col-xl-2">
-                            <button class="map-button" id="vineyards">Vineyards</button>
+                            <button class="map-button" id="vineyards" data-attribute="vineyards">Vineyards</button>
                         </div>
                         <div class="col-6 col-xl-2">
-                            <button class="map-button" id="restaurants">Restaurants</button>
+                            <button class="map-button" id="restaurants" data-attribute="restaurants">Restaurants</button>
                         </div>
                         <div class="col-6 col-xl-2">
-                            <button class="map-button" id="hotels">Hotels</button>
+                            <button class="map-button" id="hotels" data-attribute="hotels">Hotels</button>
                         </div>
                     </div>
                 </div>
@@ -230,7 +230,7 @@
 
                         <p>Get in contact with us with any questions you have about visiting St Tropez!</p>
 
-                        <form onsubmit="return sendMail(this)">
+                        <form onsubmit="return sendMail(this)" id="contact-form">
                             <div class="row">
                                 <div class="form-input col-12 col-md-6">
                                     <label for="fname" class="form-field-name"></label>
@@ -303,7 +303,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <!----Google Map API's script---->
-    <script async="false"
+    <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA3oFi2xWxvfCrm97hfyE-1OjIyfFG1Ig&callback=initMap"></script>
     <!----Own Script Files---->
     <script src="assets/js/script.js"></script>
