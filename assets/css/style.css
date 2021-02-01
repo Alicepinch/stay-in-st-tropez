@@ -253,6 +253,7 @@ textarea:focus {
 }
 
 
+
 /* Footer */
 
 .social-networks {
@@ -317,7 +318,10 @@ textarea:focus {
 	.locations-container p {
 		margin-left: 1rem;
 		margin-right: 1rem;
-	}
+    }
+    .recommendation img {
+    height: 200px;
+    }
 }
 
 @media screen and (min-width: 768px) {
