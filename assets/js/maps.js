@@ -3,7 +3,7 @@ const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
 const pampellone = { lat: 43.22816264096342, lng: 6.649391087955331 };
 const cogolin = { lat: 43.305768388687284, lng: 6.557175604097107 };
 const stTropezTown = { lat: 43.25842782566118, lng: 6.657048252167533 };
-const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 }
+const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 };
 let mapOptions;
 let map;
 
@@ -599,7 +599,7 @@ const hotelsLocations = [{
 
 //Google map API created following the guides and adjusting code from https://developers.google.com/maps/documentation/javascript/how-tos
 
-// Init map is the first map users will see
+// Init map is the initial map users will see
 function initMap(locations) {
 
     mapOptions = {
@@ -611,7 +611,7 @@ function initMap(locations) {
 
 }
 
-//Function to loop through all markers to be called for each location
+//Function to loop through all markers to be called for each location map
 function addMarker(locations) {
 
     if (locations) {
