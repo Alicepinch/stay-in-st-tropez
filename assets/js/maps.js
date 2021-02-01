@@ -461,7 +461,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    Make a booking:<a href="https://www.lagarbine.com/en/" target="_blank">https://www.lagarbine.com/en/</a></p>
+    <a href="https://www.lagarbine.com/en/" target="_blank">Make a booking</a></p>
     </div>`
 }, {
     //La Ferme d'Augustin Hôtel 4 étoiles
@@ -474,7 +474,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    Make a booking:<a href="https://www.fermeaugustin.com/en" target="_blank">https://www.fermeaugustin.com/en/</a></p>
+    <a href="https://www.fermeaugustin.com/en" target="_blank">Make a booking</a></p>
     </div>`
 }, {
     //Hotel Saint Vincent
@@ -487,7 +487,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: 464 Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    Make a booking:<a href="https://hotelsaintvincent.com/en/" target="_blank">https://hotelsaintvincent.com/en/</a></p>
+    <a href="https://hotelsaintvincent.com/en/" target="_blank">Make a booking</a></p>
     </div>`
 }, {
     //La Figuière
@@ -500,7 +500,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: 534 Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    Make a booking:<a href="https://www.hotel-lafiguiere.com/en/" target="_blank">https://www.hotel-lafiguiere.com/en/</a></p>
+    <a href="https://www.hotel-lafiguiere.com/en/" target="_blank">Make a booking</a></p>
     </div>`
 }, {
     //Château de la Messardière
@@ -513,7 +513,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: 2 Route de Tahiti, 83990 Saint-Tropez, France
     <br> 
-    Make a booking:<a href="https://www.messardiere.com/en/index.php" target="_blank">https://www.messardiere.com/en/index.php</a></p>
+    <a href="https://www.messardiere.com/en/index.php" target="_blank">Make a booking</a></p>
     </div>`
 }, {
     //Hôtel de Paris Saint-Tropez
@@ -526,7 +526,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: 1 Traverse de la Gendarmerie, 83990 Saint-Tropez, France
     <br>
-    Make a booking:<a href="https://www.messardiere.com/en/index.php" target="_blank">https://www.messardiere.com/en/index.php </a></p>
+    <a href="https://www.messardiere.com/en/index.php" target="_blank">Make a booking</a></p>
     </div>`
 }, {
     //Hôtel La Mandarine
@@ -539,7 +539,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: Chemin de Belle Isnarde, 83990 Saint-Tropez, France
     <br>
-    Make a booking:<a href="https://www.booking.com/hotel/fr/lemandarine.en-gb.html" target="_blank">https://www.booking.com/hotel/fr/lemandarine.en-gb.html</a></p>
+    <a href="https://www.booking.com/hotel/fr/lemandarine.en-gb.html" target="_blank">Make a booking</a></p>
     </div>`
 }, {
     //Hotel Sezz Saint-tropez
@@ -552,7 +552,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: 151 Chemin des Salins, 83990 Saint-Tropez, France
     <br>
-    Make a booking:<a href="https://saint-tropez.hotelsezz.com/en/" target="_blank">https://saint-tropez.hotelsezz.com/en/</a></p>
+    <a href="https://saint-tropez.hotelsezz.com/en/" target="_blank"> Make a booking</a></p>
     </div>`
 }, {
     //Le Pre de la Mer
@@ -565,7 +565,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: Les Salins, 83990 Saint-Tropez, France
     <br>
-    Make a booking:<a href="https://www.lepredelamer.fr/" target="_blank">https://www.lepredelamer.fr/</a></p>
+    <a href="https://www.lepredelamer.fr/" target="_blank">Make a booking</a></p>
     </div>`
 },
 {
@@ -579,7 +579,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: 364 Chemin de, 83350 Ramatuelle, France
     <br>
-    Make a booking:<a href="https://www.muse-hotels.com/" target="_blank">https://www.muse-hotels.com/</a></p>
+    <a href="https://www.muse-hotels.com/" target="_blank">Make a booking</a></p>
     </div>`
 },
 {
@@ -593,7 +593,7 @@ const hotelsLocations = [{
     <p class="info-text">
     Address: Chemin des Salins, 83990 Saint-Tropez, France
     <br>
-    Make a booking:<a href="https://www.saintamour-hotel.com/en/" target="_blank">https://www.saintamour-hotel.com/en/</a></p>
+    <a href="https://www.saintamour-hotel.com/en/" target="_blank">Make a booking</a></p>
     </div>`
 }];
 
