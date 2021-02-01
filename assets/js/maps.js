@@ -4,6 +4,10 @@ const pampellone = { lat: 43.22816264096342, lng: 6.649391087955331 };
 const cogolin = { lat: 43.305768388687284, lng: 6.557175604097107 };
 const stTropezTown = { lat: 43.25842782566118, lng: 6.657048252167533 };
 const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 };
+const address = `Address:`
+const book = `Book Now:`
+const makeBooking = `Make A Booking`
+const contact = `Contact:`
 let mapOptions;
 let map;
 
@@ -18,13 +22,11 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Nikki Beach</h6>
     <p class="info-text">
-    Address: 1093 Chemin de l'EPI, 83350 Ramatuelle, France
+    ${address} 1093 Chemin de l'EPI, 83350 Ramatuelle, France
     <br>
-    Book Now: <a href="tel:+33494798204">+33 4 94 798 204</a>
+    ${book} <a href="tel:+33494798204">+33 4 94 798 204</a>
     <br>
     <a href="mailto:reservations.sttropez@nikkibeach.com">reservations.sttropez@nikkibeach.com</a>
-    <br>
-    <a href="https://nikkibeach.com/" target="_blank">Visit Website</a></p>
     </div>`
 }, {
     //La Reserve a la plage 
@@ -35,9 +37,9 @@ const beachLocations = [{
     content: `<div class="info-window">
    <h6 class="info-heading">La Reserve a la plage</h6>
    <p class="info-text">
-    Address: Chemin de l'EPI, 83350 Ramatuelle, France
+    ${address} Chemin de l'EPI, 83350 Ramatuelle, France
     <br>
-    Book Now: <a href="tel:+33494449444">+33 4 94 79 82 04</a>
+    ${book} <a href="tel:+33494449444">+33 4 94 79 82 04</a>
     <br>
     <a href="mailto:reservation@lareserve-ramatuelle.com">rreservation@lareserve-ramatuelle.com</a></p>
    </div>`
@@ -50,9 +52,9 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Indie beach house</h6>
     <p class="info-text">
-    Address: Route de Bonne Terrasse, 83350 Ramatuelle, France
+    ${address} Route de Bonne Terrasse, 83350 Ramatuelle, France
     <br>
-    Book Now: <a href="tel:+33(0)494798104">+33 4 94 79 82 04</a>
+    ${book} <a href="tel:+33(0)494798104">+33 4 94 79 82 04</a>
     <br>
     <a href="mailto:info@indiebeach.fr">info@indiebeach.fr</a></p>
     </div>`
@@ -65,9 +67,9 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Verde by Yeeels</h6>
     <p class="info-text">
-    Address: 1149 Chemin de l'EPI, 83350 Ramatuelle, France
+    ${address} 1149 Chemin de l'EPI, 83350 Ramatuelle, France
     <br>
-    Book Now: <a href="tel:+33647523620">+33 6 47 52 36 20</a>
+    ${book} <a href="tel:+33647523620">+33 6 47 52 36 20</a>
     </p>
     </div>`
 }, {
@@ -79,7 +81,7 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">La serena</h6>
     <p class="info-text">
-    Address: 83350 Ramatuelle, France
+    ${address} 83350 Ramatuelle, France
     <br>
     Book Now: <a href="tel:+33494433185">+33 4 94 43 31 85</a></p>
     </div>`
@@ -92,7 +94,7 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Le Club 55</h6>
     <p class="info-text">
-    Address: 43 Boulevard Patch, 83350 Ramatuelle, France
+    ${address} 43 Boulevard Patch, 83350 Ramatuelle, France
     <br>
     Book Now: <a href="tel:+33494555555">+33 4 94 55 55 55</a></p>
     </div>`
@@ -105,7 +107,7 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Tiki club</h6>
     <p class="info-text">
-    Address: Kon Tiki - Plage de Pampelonne, 4363 Route des Plages, 83350 Ramatuelle, France
+    ${address} Kon Tiki - Plage de Pampelonne, 4363 Route des Plages, 83350 Ramatuelle, France
     <br>
     Book Now: <a href="tel:+33494559694">+33 4 94 55 96 94</a></p>
     </div>`
@@ -118,7 +120,7 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Bagatelle St Tropez</h6>
     <p class="info-text">
-    Address: Les Tamaris, Chemin de Matarane, 83350 Ramatuelle, France
+    ${address} Les Tamaris, Chemin de Matarane, 83350 Ramatuelle, France
     <br>
     Book Now: <a href="tel:+33494798325">+33 4 94 79 83 25</a></p>
     </div>`
@@ -131,7 +133,7 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Shellona</h6>
     <p class="info-text">
-    Address: Chemin des Tamaris, 83350 Ramatuelle, France
+    ${address} Chemin des Tamaris, 83350 Ramatuelle, France
     <br>
     Book Now: <a href="tel:+33494438734">+33 4 94 43 87 34</a>
     <br></p>
@@ -145,7 +147,7 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Plage Restaurant L'Orangerie</h6>
     <p class="info-text">
-    Address: Quartier De Pampelonne, 962 Chemin des Tamaris, 83350 Ramatuelle, France
+    ${address} Quartier De Pampelonne, 962 Chemin des Tamaris, 83350 Ramatuelle, France
     <br>
     Book Now: <a href="tel:+33494798474">+33 4 94 79 84 74</a></p>
     </div>`
@@ -158,9 +160,9 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Club Les Palmiers Ramatuelle</h6>
     <p class="info-text">
-    Address: Chemin des Tamaris, 83350 Ramatuelle, France
+    ${address} Chemin des Tamaris, 83350 Ramatuelle, France
     <br>
-    Book Now: <a href="tel:+33494798270">+33 4 94 79 82 70</a>
+    ${book} <a href="tel:+33494798270">+33 4 94 79 82 70</a>
     <br>
     <a href="mailto:s.cachat@wanadoo.fr">s.cachat@wanadoo.fr</a></p>
     </div>`
@@ -173,9 +175,9 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Tahiti Beach</h6>
     <p class="info-text">
-    Address: 83350 Ramatuelle, France
+    ${address} 83350 Ramatuelle, France
     <br>
-    Book Now: <a href="tel:+33494971802">+33 4 94 97 18 02</a>
+    ${book} <a href="tel:+33494971802">+33 4 94 97 18 02</a>
     <br>
     <a href="mailto:reception@tahiti-beach.com">reception@tahiti-beach.com</a></p>
     </div>`
@@ -188,9 +190,9 @@ const beachLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Tropezina Beach</h6>
     <p class="info-text">
-    Address: 4 Route du Pinet, 83350 Ramatuelle, France
+    ${address} 4 Route du Pinet, 83350 Ramatuelle, France
     <br>
-    Book Now: <a href="tel:+33494973678"> +33 4 94 97 36 78</a>
+    ${book} <a href="tel:+33494973678"> +33 4 94 97 36 78</a>
     </p>
     </div>`
 }];
@@ -205,9 +207,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Domaine des Beaucas</h6>
     <p class="info-text">
-    Address: Quartier Beaucas, 83120 Sainte-Maxime, France
+    ${address} Quartier Beaucas, 83120 Sainte-Maxime, France
     <br>
-    Contact: <a href="tel:+33494407376">+33 4 94 40 73 76</a></p>
+    ${contact}<a href="tel:+33494407376">+33 4 94 40 73 76</a></p>
     </div>`
 }, {
     //Domaine Mirabeau
@@ -217,9 +219,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Domaine Mirabeau</h6>
     <p class="info-text">
-    Address: D74, 83680 La Garde-Freinet, France
+    ${address} D74, 83680 La Garde-Freinet, France
     <br>
-    Contact: <a href="tel:+33644389496">+33 6 44 38 94 964</a></p>
+    ${contact}<a href="tel:+33644389496">+33 6 44 38 94 964</a></p>
     </div>`
 }, {
     //Château Minuty
@@ -230,9 +232,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Château Minuty</h6>
     <p class="info-text">
-    Address: 2491 Route de la Berle, 83580 Gassin, France
+    ${address} 2491 Route de la Berle, 83580 Gassin, France
     <br>
-    Contact: <a href="tel:+33494561209">+33 4 94 56 12 09</a></p>
+    ${contact}<a href="tel:+33494561209">+33 4 94 56 12 09</a></p>
     </div>`
 }, {
     //Château des Marres
@@ -243,9 +245,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Domaine Des Beaucas</h6>
     <p class="info-text">
-    Address: 2998 Route des Plages, 83350 Ramatuelle, France
+    ${address} 2998 Route des Plages, 83350 Ramatuelle, France
     <br>
-    Contact: <a href="tel:+33494972261">+33 4 94 97 22 61</a></p>
+    ${contact}<a href="tel:+33494972261">+33 4 94 97 22 61</a></p>
     </div>`
 }, {
     //Domaine de la Croix
@@ -256,9 +258,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Domaine de la Croix</h6>
     <p class="info-text">
-    Address: 816 Boulevard Tabarin, 83420 La Croix-Valmer, France
+    ${address} 816 Boulevard Tabarin, 83420 La Croix-Valmer, France
     <br>
-    Contact: <a href="tel:+33494950175">+33 4 94 95 01 75</a></p>
+    ${contact}<a href="tel:+33494950175">+33 4 94 95 01 75</a></p>
     </div>`
 }, {
     //Chateau Barbeyrolles
@@ -269,9 +271,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Chateau Barbeyrolles</h6>
     <p class="info-text">
-    Address: 2065 Route de la Berle, 83580 Gassin, France
+    ${address} 2065 Route de la Berle, 83580 Gassin, France
     <br>
-    Contact: <a href="tel:+33494563358">+33 4 94 56 33 58</a></p>
+    ${contact}<a href="tel:+33494563358">+33 4 94 56 33 58</a></p>
     </div>`
 }, {
     //Cave de Saint Tropez
@@ -282,9 +284,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Cave de Saint Tropez</h6>
     <p class="info-text">
-    Address: Route des Plages, 83990 Saint-Tropez, France
+    ${address} Route des Plages, 83990 Saint-Tropez, France
     <br>
-    Contact: <a href="tel:+33494970160">+33 4 94 97 01 60</a></p>
+    ${contact}<a href="tel:+33494970160">+33 4 94 97 01 60</a></p>
     </div>`
 }, {
     //Maison Angelvin
@@ -295,9 +297,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Maison Angelvin</h6>
     <p class="info-text">
-    Address: 65 La Pierre Plantée, 83990 Saint-Tropez, France
+    ${address} 65 La Pierre Plantée, 83990 Saint-Tropez, France
     <br>
-    Contact: <a href="tel:+33627842447">+33 6 27 84 24 47</a></p>
+    ${contact}<a href="tel:+33627842447">+33 6 27 84 24 47</a></p>
     </div>`
 }, {
     //Domaine Bertaud Belieu
@@ -308,9 +310,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Domaine Bertaud Belieu</h6>
     <p class="info-text">
-    Address: Domaine Bertaud Belieu 635 RD61, Route de Ramatuelle, 83580 Gassin,France
+    ${address} Domaine Bertaud Belieu 635 RD61, Route de Ramatuelle, 83580 Gassin,France
     <br>
-    Contact: <a href="tel:+33494561683">+33 4 94 56 16 83</a></p>
+    ${contact}<a href="tel:+33494561683">+33 4 94 56 16 83</a></p>
     </div>`
 }, {
     //Domaine La Rouillère - AOC Côtes de Provence
@@ -321,9 +323,9 @@ const vineyardLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Domaine La Rouillère - AOC Côtes de Provence</h6>
     <p class="info-text">
-    Address: 2991 D61, 83580 Gassin, France
+    ${address} 2991 D61, 83580 Gassin, France
     <br>
-    Contact: <a href="tel:+33494557260">+33 4 94 55 72 60</a></p>
+    ${contact} <a href="tel:+33494557260">+33 4 94 55 72 60</a></p>
     </div>`
 }];
 
@@ -338,9 +340,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Senequier</h6>
     <p class="info-text">
-    Address: 29 Quai Jean Jaurès, 83990 Saint-Tropez, France
+    ${address} 29 Quai Jean Jaurès, 83990 Saint-Tropez, France
     <br>
-    Book Now: <a href="tel:+33494972020">+33 4 94 97 20 20</a></p>
+    ${book} <a href="tel:+33494972020">+33 4 94 97 20 20</a></p>
     </div>`
 }, {
     //Dior Des Lices
@@ -351,9 +353,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Dior Des Lices</h6>
     <p class="info-text">
-    Address: 13 Rue François Sibilli, 83990 Saint-Tropez, France
+    ${address} 13 Rue François Sibilli, 83990 Saint-Tropez, France
     <br>
-    Book Now: <a href="tel:+33498126765">+33 4 98 12 67 65</a></p>
+    ${book} <a href="tel:+33498126765">+33 4 98 12 67 65</a></p>
     </div>`
 }, {
     //Restaurant L'Italien
@@ -364,9 +366,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Restaurant L'Italien</h6>
     <p class="info-text">
-    Address: 17 Quai Jean Jaurès, 83990 Saint-Tropez, France
+    ${address} 17 Quai Jean Jaurès, 83990 Saint-Tropez, France
     <br>
-    Book Now: <a href="tel:+33489816191">+33 4 89 81 61 91</a></p>
+    ${book} <a href="tel:+33489816191">+33 4 89 81 61 91</a></p>
     </div>`
 }, {
     //Resto Thaï
@@ -377,9 +379,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Resto Thaï</h6>
     <p class="info-text">
-    Address: 3 Rue des Charrons, 83990 Saint-Tropez, France
+    ${address} 3 Rue des Charrons, 83990 Saint-Tropez, France
     <br>
-    Book Now: <a href="tel:+33489780758">+33 4 89 78 07 58</a></p>
+    ${book} <a href="tel:+33489780758">+33 4 89 78 07 58</a></p>
     </div>`
 }, {
     //Pablo
@@ -390,9 +392,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Pablo</h6>
     <p class="info-text">
-    Address: Place des Lices, 83990 Saint-Tropez, France
+    ${address} Place des Lices, 83990 Saint-Tropez, France
     <br>
-    Book Now: <a href="tel:+33494971133">+33 4 94 97 11 33</a></p>
+    ${book} <a href="tel:+33494971133">+33 4 94 97 11 33</a></p>
     </div>`
 }, {
     //Luna Rossa
@@ -403,9 +405,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Luna Rossa</h6>
     <p class="info-text">
-    Address: 1 place des lices, 83990 Saint-Tropez, France
+    ${address} 1 place des lices, 83990 Saint-Tropez, France
     <br>
-    Book Now: <a href="tel:+33494973127">+33 4 94 97 31 27</a></p>
+    ${book} <a href="tel:+33494973127">+33 4 94 97 31 27</a></p>
     </div>`
 }, {
     //La Ramade
@@ -416,9 +418,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">La Ramade</h6>
     <p class="info-text">
-    Address: Rue du Temple, 83990 Saint-Tropez, France
+    ${address} Rue du Temple, 83990 Saint-Tropez, France
     <br>
-    Book Now: <a href="tel:+33494815867">+33 4 94 81 58 67</a></p>
+    ${book} <a href="tel:+33494815867">+33 4 94 81 58 67</a></p>
     </div>`
 }, {
     //Salama
@@ -429,9 +431,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Salama</h6>
     <p class="info-text">
-    Address: 1 Chemin des Conquettes, 83990 Saint-Tropez, France
+    ${address} 1 Chemin des Conquettes, 83990 Saint-Tropez, France
     <br>
-    Book Now: <a href="tel:+33494965293">+33 4 94 96 52 93</a></p>
+    ${book} <a href="tel:+33494965293">+33 4 94 96 52 93</a></p>
     </div>`
 }, {
     //Le Pomme De Pin
@@ -442,9 +444,9 @@ const restaurantsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Le Pomme De Pin</h6>
     <p class="info-text">
-    Address: Route de Tahiti, 83350 Ramatuelle, France
+    ${address} Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    Book Now: <a href="tel:+33494977370">+33 4 94 97 73 70</a></p>
+    ${book} <a href="tel:+33494977370">+33 4 94 97 73 70</a></p>
     </div>`
 }];
 
@@ -459,9 +461,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Hotel La Garbine Ramatuelle | Séminaires À St Tropez</h6>
     <p class="info-text">
-    Address: Route de Tahiti, 83350 Ramatuelle, France
+    ${address} Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    <a href="https://www.lagarbine.com/en/" target="_blank">Make a booking</a></p>
+    <a href="https://www.lagarbine.com/en/" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //La Ferme d'Augustin Hôtel 4 étoiles
@@ -472,9 +474,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">La Ferme d'Augustin Hôtel 4 étoiles</h6>
     <p class="info-text">
-    Address: Route de Tahiti, 83350 Ramatuelle, France
+    ${address} Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    <a href="https://www.fermeaugustin.com/en" target="_blank">Make a booking</a></p>
+    <a href="https://www.fermeaugustin.com/en" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Hotel Saint Vincent
@@ -485,9 +487,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Hotel Saint Vincent</h6>
     <p class="info-text">
-    Address: 464 Route de Tahiti, 83350 Ramatuelle, France
+    ${address} 464 Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    <a href="https://hotelsaintvincent.com/en/" target="_blank">Make a booking</a></p>
+    <a href="https://hotelsaintvincent.com/en/" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //La Figuière
@@ -498,9 +500,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">La Figuière</h6>
     <p class="info-text">
-    Address: 534 Route de Tahiti, 83350 Ramatuelle, France
+    ${address} 534 Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    <a href="https://www.hotel-lafiguiere.com/en/" target="_blank">Make a booking</a></p>
+    <a href="https://www.hotel-lafiguiere.com/en/" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Château de la Messardière
@@ -511,9 +513,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Château de la Messardière</h6>
     <p class="info-text">
-    Address: 2 Route de Tahiti, 83990 Saint-Tropez, France
+    ${address} 2 Route de Tahiti, 83990 Saint-Tropez, France
     <br> 
-    <a href="https://www.messardiere.com/en/index.php" target="_blank">Make a booking</a></p>
+    <a href="https://www.messardiere.com/en/index.php" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Hôtel de Paris Saint-Tropez
@@ -524,9 +526,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Hôtel de Paris Saint-Tropez</h6>
     <p class="info-text">
-    Address: 1 Traverse de la Gendarmerie, 83990 Saint-Tropez, France
+    ${address} 1 Traverse de la Gendarmerie, 83990 Saint-Tropez, France
     <br>
-    <a href="https://www.messardiere.com/en/index.php" target="_blank">Make a booking</a></p>
+    <a href="https://www.messardiere.com/en/index.php" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Hôtel La Mandarine
@@ -537,9 +539,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Hôtel La Mandarine</h6>
     <p class="info-text">
-    Address: Chemin de Belle Isnarde, 83990 Saint-Tropez, France
+    ${address} Chemin de Belle Isnarde, 83990 Saint-Tropez, France
     <br>
-    <a href="https://www.booking.com/hotel/fr/lemandarine.en-gb.html" target="_blank">Make a booking</a></p>
+    <a href="https://www.booking.com/hotel/fr/lemandarine.en-gb.html" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Hotel Sezz Saint-tropez
@@ -550,9 +552,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Hotel Sezz Saint-tropez</h6>
     <p class="info-text">
-    Address: 151 Chemin des Salins, 83990 Saint-Tropez, France
+    ${address} 151 Chemin des Salins, 83990 Saint-Tropez, France
     <br>
-    <a href="https://saint-tropez.hotelsezz.com/en/" target="_blank"> Make a booking</a></p>
+    <a href="https://saint-tropez.hotelsezz.com/en/" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Le Pre de la Mer
@@ -563,9 +565,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Le Pre de la Mer</h6>
     <p class="info-text">
-    Address: Les Salins, 83990 Saint-Tropez, France
+    ${address} Les Salins, 83990 Saint-Tropez, France
     <br>
-    <a href="https://www.lepredelamer.fr/" target="_blank">Make a booking</a></p>
+    <a href="https://www.lepredelamer.fr/" target="_blank">${makeBooking}</a></p>
     </div>`
 },
 {
@@ -577,9 +579,9 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Muse Hotel Saint Tropez</h6>
     <p class="info-text">
-    Address: 364 Chemin de, 83350 Ramatuelle, France
+    ${address} 364 Chemin de, 83350 Ramatuelle, France
     <br>
-    <a href="https://www.muse-hotels.com/" target="_blank">Make a booking</a></p>
+    <a href="https://www.muse-hotels.com/" target="_blank">${makeBooking}</a></p>
     </div>`
 },
 {
@@ -591,16 +593,16 @@ const hotelsLocations = [{
     content: `<div class="info-window">
     <h6 class="info-heading">Hôtel Saint Amour La Tartane</h6>
     <p class="info-text">
-    Address: Chemin des Salins, 83990 Saint-Tropez, France
+    ${address} Chemin des Salins, 83990 Saint-Tropez, France
     <br>
-    <a href="https://www.saintamour-hotel.com/en/" target="_blank">Make a booking</a></p>
+    <a href="https://www.saintamour-hotel.com/en/" target="_blank">${makeBooking}</a></p>
     </div>`
 }];
 
 //Google map API created following the guides and adjusting code from https://developers.google.com/maps/documentation/javascript/how-tos
 
 // Init map is the initial map users will see
-function initMap(locations) {
+function initMap() {
 
     mapOptions = {
         zoom: 12,
@@ -627,7 +629,7 @@ function addMarker(locations) {
             let infoWindow = new google.maps.InfoWindow({
                 content: locations[i].content,
             });
-
+            
             google.maps.event.addListener(marker, 'click', function () {
                 infoWindow.open(map, marker);
                 if (currWindow != null) {
@@ -638,11 +640,12 @@ function addMarker(locations) {
             });
 
             var currWindow = null;
+
         }
     }
 }
 
-//Map displayed when clicked on the "Beaches" Button
+//New map created to be displayed when clicked on the "Beaches" Button
 function initMapBeach(locations) {
 
     mapOptions = {
@@ -654,7 +657,7 @@ function initMapBeach(locations) {
 
 }
 
-//Map displayed when clicked on the "Vineyards" Button
+//New map created to be displayed when clicked on the "Vineyards" Button
 function initMapVineyards(locations) {
 
     mapOptions = {
@@ -666,7 +669,7 @@ function initMapVineyards(locations) {
 
 }
 
-//Map displayed when clicked on the "Restaurants" Button
+//New map created to be displayed when clicked on the "Restaurants" Button
 function initMapRestaurants(locations) {
 
     mapOptions = {
@@ -678,7 +681,7 @@ function initMapRestaurants(locations) {
 
 }
 
-//Map displayed when clicked on the "Hotels" Button
+//New map created to be displayed when clicked on the "Hotels" Button
 function initMapHotels(locations) {
 
     mapOptions = {
