@@ -67,7 +67,7 @@ The fonts that I have decided to use for this project are Poppins and Roboto fro
 #### Colour Scheme
 The colours used on the website were chosen as these are the colours usually associated with the South of France. Lavender is the flower of the Provence so I wanted to ensure that this was used throughout. The beige background represents the buildings and the brown represents the classic shutter you would find on a french chateau. As the colours that have been used are soft I chose to use a shade of grey too compliment this for the body text, website name and logo. The lavender has been used for all CTA's, links and subheadings on the website. The brown has been used as the hover colour for all links and CTA's. 
 
-![Colour Pallet](docs/readme/stay-in-st-tropez-color-pallett.png)
+![Colour Pallet](docs/readme/st-tropez-colour-pallett.png)
 
 ## Features Implemented
 
@@ -115,8 +115,8 @@ This website is responsive and can be used across web browsers and different dev
 
 - A subscription modal so users can sign up and recieve newsletters on all things St Tropez. 
 - An option for customers to switch between French content and English content.
-- Different recommendations appearing depending on which button was clicked in the 'Explore' area.
-- A list of all locations next to the map when the buttons are clicked so the informatin is clear.
+- Different recommendations appearing depending on which button was clicked in the 'Explore' area (This was outlined in planned features however there was no time to implement this so would be a future feature)
+- A list of all locations next to the map when the buttons are clicked so the information is clear.
 
 ## Technologies Used
 
@@ -142,7 +142,7 @@ This website is responsive and can be used across web browsers and different dev
 - [Balsamiq](https://balsamiq.com/) - To create the wireframes for Desktop, Tablet and Phone.
 - [Gimp](https://www.gimp.org/) - Used to resize images.
 - [Tinypng](https://tinypng.com/) - To compress all images.
-- [W3Schools](https://www.w3schools.com/) - For code questions throughout the project.
+- [W3Schools](https://www.w3schools.com/) - For code questions throughout the project. Outlined in code where used for scroll function.
 - [StackOverflow](https://stackoverflow.com/) - For code questions throughout the project. 
 - [Coloors](https://coolors.co/) - Used to create the colour pallett.
 - [freelogodesign](https://www.freelogodesign.org/) - To create the logo for Stay In St Tropez.
@@ -180,7 +180,9 @@ More details can be found via the [github docs.](https://docs.github.com/en/gith
 
 ## Credits
 
-The google map API's were created following the google map tutorials available https://developers.google.com/maps/documentation/javascript/example and the code was adjusted and modified for my needs for this project. 
+- The google map API's were created following the google map tutorials available https://developers.google.com/maps/documentation/javascript/example and the code was adjusted and modified for my needs for this project. 
+- Youtube https://www.youtube.com/watch?v=09ck9iz4fEw&t=129s for the video used on webpage. 
+- All phone numbers and addresses and booking URL's were taken from google. 
 
 ### Content
 
