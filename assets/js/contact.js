@@ -12,8 +12,6 @@ function sendMail(contactForm) {
 
             //Function changes the submit button when form submitted alerts user
             function () {
-                submitButton.innerHTML = "Message Sent!";
-                submitButton.classList.add("active");
                 alert("Thank you for getting in touch, We will get back to you soon.");
             },
 
@@ -23,12 +21,7 @@ function sendMail(contactForm) {
             });
 
     // Clears the form fields after form is submitted
-    document.getElementById("subject").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("fname").value = "";
-    document.getElementById("lname").value = "";
-    document.getElementById("subject").value = "";
-    document.getElementById("message").value = "";
+    document.getElementById("contact_form").reset();
 
     return false;
 }
