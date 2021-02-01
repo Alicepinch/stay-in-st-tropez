@@ -288,9 +288,12 @@ textarea:focus {
 	}
 	.locations-container {
 		max-width: 90%;
-	}
+    }
+    h1 {
+        font-size: 2rem;
+    }
 	h2 {
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 	}
 	h3 {
 		font-size: 1.3rem;
@@ -307,10 +310,6 @@ textarea:focus {
 	.video-container iframe {
 		height: 100%;
 		width: 100%;
-	}
-	.introduction-container p {
-		margin-left: 0rem;
-		margin-right: 0rem;
 	}
 	.recommendation button {
 		margin-bottom: 1rem;
