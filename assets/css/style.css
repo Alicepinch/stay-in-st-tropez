@@ -24,7 +24,11 @@ h5,
 h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #9882b3;
+  color: #886ead;
+}
+
+h2 {
+    padding-bottom: .5rem;
 }
 
 p {
@@ -65,7 +69,7 @@ a:hover {
 }
 
 .nav-item {
-    color: #9882b3;
+    color: #886ead;
     font-size: 1.2em;
     font-family:"Poppins", sans-serif;
     padding: 1rem;
@@ -115,15 +119,9 @@ a:hover {
     margin-right: 4rem;
 }
 
-.introduction-container, .contact-container, .locations-container h2 {
-    padding-bottom: .5rem;
-}
-
 .video-container {
     padding-bottom: 1rem;
 }
-
-/* .video-container */
 
 .video-container iframe {
     height: 40vh;
@@ -139,7 +137,7 @@ a:hover {
 /* Button Styling */
 
 .button-purple, .map-button {
-    background-color:#9882b3;
+    background-color:#886ead;
     color: #fff;
     padding: .5rem 1rem .5rem 1rem;
     border-radius: 30px;
@@ -185,7 +183,7 @@ a:hover {
 
 .info-text {
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 /* Top Recommendations */
@@ -202,7 +200,7 @@ a:hover {
 
 .recommendation button{
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: .5rem;
 }
 
 .more-details {
@@ -267,7 +265,7 @@ input:focus, textarea:focus {
 }
 
 .social-networks i:hover {
-    color: #9882b3;
+    color: #886ead;
 }
 
 /* Media Queries */ 
