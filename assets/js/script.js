@@ -8,7 +8,7 @@ const beachRecoPara = document.getElementById("reco-para-1");
 const restaurantRecoPara = document.getElementById("reco-para-2");
 const vineyardRecoPara = document.getElementById("reco-para-3");
 const scrollButton = document.getElementById("scroll-top");
-let pageHeight = 100;
+let pageHeight = 200;
 
 //Hides the following components when document is ready
 $(function () {
@@ -37,12 +37,12 @@ $(function () {
 //Function changes text and colour of button when clicked for 'Watch Video CTA'
 function changeText() {
     if ($(watchVideo).html() === "Watch Video") {
-        $(watchVideo).html("Hide Video") ;
+        $(watchVideo).html("Hide Video");
         $(watchVideo).addClass("active");
     }
     else {
         $(watchVideo).html("Watch Video");
-         $(watchVideo).removeClass("active");
+        $(watchVideo).removeClass("active");
     }
 };
 
@@ -50,7 +50,7 @@ function changeText() {
 function showDetails(recommendation) {
 
     if ($(recommendation).html() === "More Details") {
-        $(recommendation).html("Hide Details") ;
+        $(recommendation).html("Hide Details");
         $(recommendation).addClass("active");
     }
     else {
@@ -83,14 +83,13 @@ $(vineyardReco).click(function () {
 
 //End of jQuery
 
-//Javascript starts
 // On scroll button created and adjusted from following WS3schools tutorial
 //Assigns the scroll function to window scroll
 window.onscroll = function () {
     scrollToTop();
 };
 
-//Function displays the button if the window is less than 40px 
+//Function displays the button when the customer has scolled 200px 
 function scrollToTop() {
 
     if (document.body.scrollTop > pageHeight || document.documentElement.scrollTop > pageHeight) {
@@ -106,3 +105,4 @@ function topOfPage() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
