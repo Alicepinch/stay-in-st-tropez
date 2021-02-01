@@ -1,14 +1,14 @@
 //Setting constant variables for buttons 
-const beachReco = document.getElementById("reco-button-1");
-const restaurantReco = document.getElementById("reco-button-2");
-const vineyardReco = document.getElementById("reco-button-3");
+const beachReco = document.getElementById("beach-reco-btn");
+const restaurantReco = document.getElementById("restaurant-reco-btn");
+const vineyardReco = document.getElementById("vineyard-reco-btn");
 const watchVideo = document.getElementById("youtube-video");
 const videoContainer = document.getElementsByClassName("video-container");
-const beachRecoPara = document.getElementById("reco-para-1");
-const restaurantRecoPara = document.getElementById("reco-para-2");
-const vineyardRecoPara = document.getElementById("reco-para-3");
+const beachRecoPara = document.getElementById("beach-para");
+const restaurantRecoPara = document.getElementById("restaurant-para");
+const vineyardRecoPara = document.getElementById("vineyard-para");
 const scrollButton = document.getElementById("scroll-top");
-let pageHeight = 200;
+const scrollHeight = 200;
 
 //Hides the following components when document is ready
 $(function () {
@@ -85,14 +85,12 @@ $(vineyardReco).click(function () {
 
 // On scroll button created and adjusted from following WS3schools tutorial
 //Assigns the scroll function to window scroll
-window.onscroll = function () {
-    scrollToTop();
-};
+window.onscroll = scrollToTop;
 
 //Function displays the button when the customer has scolled 200px 
 function scrollToTop() {
 
-    if (document.body.scrollTop > pageHeight || document.documentElement.scrollTop > pageHeight) {
+    if (document.body.scrollTop > scrollHeight || document.documentElement.scrollTop > scrollHeight) {
         scrollButton.style.display = "block";
     } else {
         scrollButton.style.display = "none";
