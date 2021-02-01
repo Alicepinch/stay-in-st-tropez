@@ -44,7 +44,7 @@ function changeText() {
         $(watchVideo).html("Watch Video");
         $(watchVideo).removeClass("active");
     }
-};
+}
 
 //Function changes text and colour of More Details Button's 
 function showDetails(recommendation) {
@@ -68,17 +68,17 @@ $(watchVideo).click(function () {
 
 $(beachReco).click(function () {
     $(beachRecoPara).slideToggle();
-    showDetails(beachReco)
+    showDetails(beachReco);
 });
 
 $(restaurantReco).click(function () {
     $(restaurantRecoPara).slideToggle();
-    showDetails(restaurantReco)
+    showDetails(restaurantReco);
 });
 
 $(vineyardReco).click(function () {
     $(vineyardRecoPara).slideToggle();
-    showDetails(vineyardReco)
+    showDetails(vineyardReco);
 });
 
 //End of jQuery
@@ -87,7 +87,7 @@ $(vineyardReco).click(function () {
 //Assigns the scroll function to window scroll
 window.onscroll = scrollToTop;
 
-//Function displays the button when the customer has scolled 200px 
+//Function displays the button to user when they have scolled 200px from top of page
 function scrollToTop() {
 
     if (document.body.scrollTop > scrollHeight || document.documentElement.scrollTop > scrollHeight) {
@@ -103,4 +103,3 @@ function topOfPage() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
