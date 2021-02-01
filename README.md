@@ -5,6 +5,19 @@
 ![Ami Responsive](docs/readme/stay-in-st-tropez-ami-responsive.jpg)
 
 Stay in St Tropez is a website designed to provide information to users who want to visit the area. The website aims to promote all of the different places and activities available in the tourist location. 
+
+## Table of Index: 
+- [UX](#ux)
+   - [Strategy](#strategy)
+   - [Scope](#scope)
+   - [Structure](#structure)
+   - [Skeleton](#skeleton)
+   - [Surface](#surface)
+- [Features Implemented](#features-implemented)
+- [Technologies Used](#technologies-used)
+- [Testing](TESTING.md)
+- [Deployment](#deployment)
+- [Credits](#credits)
  
 ## User Experience 
 
