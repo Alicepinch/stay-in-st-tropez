@@ -173,7 +173,7 @@ a:hover {
 }
 
 
-/* Google  */
+/* Google Maps */
 
 #map {
 	margin-top: 1rem;
@@ -199,7 +199,7 @@ a:hover {
 
 .recommendation img {
 	width: 100%;
-	height: 300px;
+	height: 200px;
 	object-fit: cover;
 }
 
@@ -278,7 +278,7 @@ textarea:focus {
 }
 
 
-/* Media Queries */
+/* Mobile view */
 
 @media screen and (max-width: 767px) {
 	.introduction-container,
@@ -318,10 +318,13 @@ textarea:focus {
 		margin-left: 1rem;
 		margin-right: 1rem;
     }
-    .recommendation img {
-    height: 200px;
+    .more-details li {
+	font-size: 15px;
     }
+    
 }
+
+/* Ipad view */
 
 @media screen and (min-width: 768px) {
 	.recommendation button {
