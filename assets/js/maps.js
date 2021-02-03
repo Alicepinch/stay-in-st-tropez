@@ -1,17 +1,23 @@
-// Setting variables to be used throughout file
+// Setting constant variables for the locations for the initMaps for Google API
 const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
 const pampellone = { lat: 43.22816264096342, lng: 6.649391087955331 };
 const cogolin = { lat: 43.305768388687284, lng: 6.557175604097107 };
 const stTropezTown = { lat: 43.25842782566118, lng: 6.657048252167533 };
 const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 };
-const address = `<strong>Address: </strong>`
-const book = `<strong>Book Now: </strong>`
-const makeBooking = `Make A Booking`
-const contact = `<strong>Contact: </strong>`
+
+//Global variables to be used for String Interpolation in the location arrays
+const address = `<strong>Address: </strong>`;
+const book = `<strong>Book Now: </strong>`;
+const makeBooking = `Make A Booking`;
+const contact = `<strong>Contact: </strong>`;
+const website = `Visit Website`
+
+//Global variable created to be assinged within functions
 let mapOptions;
 let map;
 
-// Setting const variables for locations
+// Setting const variables for locations arrays
+
 //Beach Locations 
 const beachLocations = [{
     //Nikki Beach
@@ -27,6 +33,8 @@ const beachLocations = [{
     ${book}<a href="tel:+33494798204">+33 4 94 798 204</a>
     <br>
     <a href="mailto:reservations.sttropez@nikkibeach.com">reservations.sttropez@nikkibeach.com</a>
+    <br>
+    <a href="https://nikkibeach.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //La Reserve a la plage 
@@ -41,7 +49,9 @@ const beachLocations = [{
     <br>
     ${book}<a href="tel:+33494449444">+33 4 94 79 82 04</a>
     <br>
-    <a href="mailto:reservation@lareserve-ramatuelle.com">rreservation@lareserve-ramatuelle.com</a></p>
+    <a href="mailto:reservation@lareserve-ramatuelle.com">rreservation@lareserve-ramatuelle.com</a>
+    <br>
+    <a href="https://www.lareserve-ramatuelle.com/en/special-offers/la-reserve-la-plage/" target="_blank" aria-label="Visit Website">${website}</a></p>
    </div>`
 }, {
     // Indie beach house
@@ -56,7 +66,9 @@ const beachLocations = [{
     <br>
     ${book}<a href="tel:+33(0)494798104">+33 4 94 79 82 04</a>
     <br>
-    <a href="mailto:info@indiebeach.fr">info@indiebeach.fr</a></p>
+    <a href="mailto:info@indiebeach.fr">info@indiebeach.fr</a>
+    <br>
+    <a href="https://www.indiebeachhouse.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     // Verde by Yeeels
@@ -70,7 +82,8 @@ const beachLocations = [{
     ${address}1149 Chemin de l'EPI, 83350 Ramatuelle, France
     <br>
     ${book}<a href="tel:+33647523620">+33 6 47 52 36 20</a>
-    </p>
+    <br>
+    <a href="http://verde-beach.com/fr_fr/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     // La serena
@@ -83,7 +96,9 @@ const beachLocations = [{
     <p class="info-text">
     ${address}83350 Ramatuelle, France
     <br>
-    ${book}<a href="tel:+33494433185">+33 4 94 43 31 85</a></p>
+    ${book}<a href="tel:+33494433185">+33 4 94 43 31 85</a>
+    <br>
+    <a href="https://www.la-serena.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     // Le Club 55
@@ -96,7 +111,9 @@ const beachLocations = [{
     <p class="info-text">
     ${address}43 Boulevard Patch, 83350 Ramatuelle, France
     <br>
-    ${book}<a href="tel:+33494555555">+33 4 94 55 55 55</a></p>
+    ${book}<a href="tel:+33494555555">+33 4 94 55 55 55</a>
+    <br>
+    <a href="https://www.club55.fr/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //  Tiki club
@@ -109,7 +126,9 @@ const beachLocations = [{
     <p class="info-text">
     ${address}Kon Tiki - Plage de Pampelonne, 4363 Route des Plages, 83350 Ramatuelle, France
     <br>
-    ${book}<a href="tel:+33494559694">+33 4 94 55 96 94</a></p>
+    ${book}<a href="tel:+33494559694">+33 4 94 55 96 94</a>
+    <br>
+    <a href="https://www.riviera-villages.com/Kon-Tiki/Restaurants-Commerces/Restaurants-Bars/Le-Tiki-Club" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //  Bagatelle St Tropez
@@ -122,7 +141,9 @@ const beachLocations = [{
     <p class="info-text">
     ${address}Les Tamaris, Chemin de Matarane, 83350 Ramatuelle, France
     <br>
-    ${book}<a href="tel:+33494798325">+33 4 94 79 83 25</a></p>
+    ${book}<a href="tel:+33494798325">+33 4 94 79 83 25</a>
+    <br>
+    <a href="https://bagatellesttropez.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //  Shellona
@@ -136,7 +157,8 @@ const beachLocations = [{
     ${address}Chemin des Tamaris, 83350 Ramatuelle, France
     <br>
     ${book}<a href="tel:+33494438734">+33 4 94 43 87 34</a>
-    <br></p>
+    <br>
+    <a href="https://shellonabeach.com/en/shellona-2/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //  Plage Restaurant L'Orangerie
@@ -149,7 +171,9 @@ const beachLocations = [{
     <p class="info-text">
     ${address}Quartier De Pampelonne, 962 Chemin des Tamaris, 83350 Ramatuelle, France
     <br>
-    ${book}<a href="tel:+33494798474">+33 4 94 79 84 74</a></p>
+    ${book}<a href="tel:+33494798474">+33 4 94 79 84 74</a>
+    <br>
+    <a href="http://www.plage-orangerie.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //  Club Les Palmiers Ramatuelle
@@ -164,7 +188,9 @@ const beachLocations = [{
     <br>
     ${book}<a href="tel:+33494798270">+33 4 94 79 82 70</a>
     <br>
-    <a href="mailto:s.cachat@wanadoo.fr">s.cachat@wanadoo.fr</a></p>
+    <a href="mailto:s.cachat@wanadoo.fr">s.cachat@wanadoo.fr</a>
+    <br>
+    <a href="http://www.clubpalmiers.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //  Restaurant Tahiti Beach
@@ -179,7 +205,9 @@ const beachLocations = [{
     <br>
     ${book}<a href="tel:+33494971802">+33 4 94 97 18 02</a>
     <br>
-    <a href="mailto:reception@tahiti-beach.com">reception@tahiti-beach.com</a></p>
+    <a href="mailto:reception@tahiti-beach.com">reception@tahiti-beach.com</a>
+    <br>
+    <a href="https://www.tahiti-beach.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //  Tropezina Beach
@@ -193,7 +221,8 @@ const beachLocations = [{
     ${address}4 Route du Pinet, 83350 Ramatuelle, France
     <br>
     ${book}<a href="tel:+33494973678"> +33 4 94 97 36 78</a>
-    </p>
+    <br>
+    <a href="https://www.jardin-tropezina.fr/fr/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }];
 
@@ -209,7 +238,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}Quartier Beaucas, 83120 Sainte-Maxime, France
     <br>
-    ${contact}<a href="tel:+33494407376">+33 4 94 40 73 76</a></p>
+    ${contact}<a href="tel:+33494407376">+33 4 94 40 73 76</a>
+    <br>
+    <a href="https://www.domainedesbeaucas.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Domaine Mirabeau
@@ -221,7 +252,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}D74, 83680 La Garde-Freinet, France
     <br>
-    ${contact}<a href="tel:+33644389496">+33 6 44 38 94 964</a></p>
+    ${contact}<a href="tel:+33644389496">+33 6 44 38 94 964</a>
+    <br>
+    <a href="https://www.mirabeauwine.com/about/domaine-mirabeau/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Château Minuty
@@ -234,7 +267,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}2491 Route de la Berle, 83580 Gassin, France
     <br>
-    ${contact}<a href="tel:+33494561209">+33 4 94 56 12 09</a></p>
+    ${contact}<a href="tel:+33494561209">+33 4 94 56 12 09</a>
+    <br>
+    <a href="https://www.minuty.com/fr/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Château des Marres
@@ -247,7 +282,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}2998 Route des Plages, 83350 Ramatuelle, France
     <br>
-    ${contact}<a href="tel:+33494972261">+33 4 94 97 22 61</a></p>
+    ${contact}<a href="tel:+33494972261">+33 4 94 97 22 61</a>
+    <br>
+    <a href="https://chateaudesmarres.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Domaine de la Croix
@@ -260,7 +297,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}816 Boulevard Tabarin, 83420 La Croix-Valmer, France
     <br>
-    ${contact}<a href="tel:+33494950175">+33 4 94 95 01 75</a></p>
+    ${contact}<a href="tel:+33494950175">+33 4 94 95 01 75</a>
+    <br>
+    <a href="https://www.domainedelacroix.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Chateau Barbeyrolles
@@ -273,7 +312,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}2065 Route de la Berle, 83580 Gassin, France
     <br>
-    ${contact}<a href="tel:+33494563358">+33 4 94 56 33 58</a></p>
+    ${contact}<a href="tel:+33494563358">+33 4 94 56 33 58</a>
+    <br>
+    <a href="https://www.barbeyrolles.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Cave de Saint Tropez
@@ -286,7 +327,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}Route des Plages, 83990 Saint-Tropez, France
     <br>
-    ${contact}<a href="tel:+33494970160">+33 4 94 97 01 60</a></p>
+    ${contact}<a href="tel:+33494970160">+33 4 94 97 01 60</a>
+    <br>
+    <a href="https://www.torpez.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Maison Angelvin
@@ -299,7 +342,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}65 La Pierre Plantée, 83990 Saint-Tropez, France
     <br>
-    ${contact}<a href="tel:+33627842447">+33 6 27 84 24 47</a></p>
+    ${contact}<a href="tel:+33627842447">+33 6 27 84 24 47</a>
+    <br>
+    <a href="https://www.maisonangelvin.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Domaine Bertaud Belieu
@@ -312,7 +357,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}Domaine Bertaud Belieu 635 RD61, Route de Ramatuelle, 83580 Gassin,France
     <br>
-    ${contact}<a href="tel:+33494561683">+33 4 94 56 16 83</a></p>
+    ${contact}<a href="tel:+33494561683">+33 4 94 56 16 83</a>
+    <br>
+    <a href="http://www.bertaud-belieu.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Domaine La Rouillère - AOC Côtes de Provence
@@ -325,7 +372,9 @@ const vineyardLocations = [{
     <p class="info-text">
     ${address}2991 D61, 83580 Gassin, France
     <br>
-    ${contact}<a href="tel:+33494557260">+33 4 94 55 72 60</a></p>
+    ${contact}<a href="tel:+33494557260">+33 4 94 55 72 60</a>
+    <br>
+    <a href="https://www.domainelarouillere.com/home" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }];
 
@@ -342,7 +391,9 @@ const restaurantsLocations = [{
     <p class="info-text">
     ${address}29 Quai Jean Jaurès, 83990 Saint-Tropez, France
     <br>
-    ${book}<a href="tel:+33494972020">+33 4 94 97 20 20</a></p>
+    ${book}<a href="tel:+33494972020">+33 4 94 97 20 20</a>
+    <br>
+    <a href="https://senequier.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Dior Des Lices
@@ -368,7 +419,9 @@ const restaurantsLocations = [{
     <p class="info-text">
     ${address}17 Quai Jean Jaurès, 83990 Saint-Tropez, France
     <br>
-    ${book}<a href="tel:+33489816191">+33 4 89 81 61 91</a></p>
+    ${book}<a href="tel:+33489816191">+33 4 89 81 61 91</a>
+    <br>
+    <a href="https://litaliensainttropez.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Resto Thaï
@@ -394,7 +447,8 @@ const restaurantsLocations = [{
     <p class="info-text">
     ${address}Place des Lices, 83990 Saint-Tropez, France
     <br>
-    ${book}<a href="tel:+33494971133">+33 4 94 97 11 33</a></p>
+    ${book}<a href="tel:+33494971133">+33 4 94 97 11 33</a>
+    <br></p>
     </div>`
 }, {
     //Luna Rossa
@@ -420,7 +474,8 @@ const restaurantsLocations = [{
     <p class="info-text">
     ${address}Rue du Temple, 83990 Saint-Tropez, France
     <br>
-    ${book}<a href="tel:+33494815867">+33 4 94 81 58 67</a></p>
+    ${book}<a href="tel:+33494815867">+33 4 94 81 58 67</a>
+    <br>
     </div>`
 }, {
     //Salama
@@ -433,7 +488,9 @@ const restaurantsLocations = [{
     <p class="info-text">
     ${address}1 Chemin des Conquettes, 83990 Saint-Tropez, France
     <br>
-    ${book}<a href="tel:+33494965293">+33 4 94 96 52 93</a></p>
+    ${book}<a href="tel:+33494965293">+33 4 94 96 52 93</a>
+    <br>
+    <a href="https://www.restaurant-salama.com/en/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
     //Le Pomme De Pin
@@ -446,7 +503,9 @@ const restaurantsLocations = [{
     <p class="info-text">
     ${address}Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    ${book}<a href="tel:+33494977370">+33 4 94 97 73 70</a></p>
+    ${book}<a href="tel:+33494977370">+33 4 94 97 73 70</a>
+    <br>
+    <a href="http://www.restaurant-lapommedepin.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }];
 
@@ -463,7 +522,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    <a href="https://www.lagarbine.com/en/" target="_blank">${makeBooking}</a></p>
+    <a href="https://www.lagarbine.com/en/" aria-label="La Garbine Booking" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //La Ferme d'Augustin Hôtel 4 étoiles
@@ -476,7 +535,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    <a href="https://www.fermeaugustin.com/en" target="_blank">${makeBooking}</a></p>
+    <a href="https://www.fermeaugustin.com/en" aria-label="La Ferme Booking"  target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Hotel Saint Vincent
@@ -489,7 +548,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}464 Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    <a href="https://hotelsaintvincent.com/en/" target="_blank">${makeBooking}</a></p>
+    <a href="https://hotelsaintvincent.com/en/" aria-label="Hotel Saint Vincent Booking"  target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //La Figuière
@@ -502,7 +561,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}534 Route de Tahiti, 83350 Ramatuelle, France
     <br>
-    <a href="https://www.hotel-lafiguiere.com/en/" target="_blank">${makeBooking}</a></p>
+    <a href="https://www.hotel-lafiguiere.com/en/" aria-label="La Figuière Booking" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Château de la Messardière
@@ -515,7 +574,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}2 Route de Tahiti, 83990 Saint-Tropez, France
     <br> 
-    <a href="https://www.messardiere.com/en/index.php" target="_blank">${makeBooking}</a></p>
+    <a href="https://www.messardiere.com/en/index.php" aria-label="Château de la Messardière Booking" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Hôtel de Paris Saint-Tropez
@@ -528,7 +587,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}1 Traverse de la Gendarmerie, 83990 Saint-Tropez, France
     <br>
-    <a href="https://www.messardiere.com/en/index.php" target="_blank">${makeBooking}</a></p>
+    <a href="https://hoteldeparis-sainttropez.com/en/the-hotel/" aria-label="Hôtel de Paris Saint-Tropez Booking" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Hôtel La Mandarine
@@ -541,7 +600,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address} Chemin de Belle Isnarde, 83990 Saint-Tropez, France
     <br>
-    <a href="https://www.booking.com/hotel/fr/lemandarine.en-gb.html" target="_blank">${makeBooking}</a></p>
+    <a href="https://www.booking.com/hotel/fr/lemandarine.en-gb.html" target="_blank" aria-label="Hôtel La Mandarine">${makeBooking}</a></p>
     </div>`
 }, {
     //Hotel Sezz Saint-tropez
@@ -554,7 +613,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}151 Chemin des Salins, 83990 Saint-Tropez, France
     <br>
-    <a href="https://saint-tropez.hotelsezz.com/en/" target="_blank">${makeBooking}</a></p>
+    <a href="https://saint-tropez.hotelsezz.com/en/" aria-label="Hotel Sezz Saint-tropez" target="_blank">${makeBooking}</a></p>
     </div>`
 }, {
     //Le Pre de la Mer
@@ -567,7 +626,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}Les Salins, 83990 Saint-Tropez, France
     <br>
-    <a href="https://www.lepredelamer.fr/" target="_blank">${makeBooking}</a></p>
+    <a href="https://www.lepredelamer.fr/" aria-label="Le Pre de la Mer Booking" target="_blank">${makeBooking}</a></p>
     </div>`
 },
 {
@@ -581,7 +640,7 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}364 Chemin de, 83350 Ramatuelle, France
     <br>
-    <a href="https://www.muse-hotels.com/" target="_blank">${makeBooking}</a></p>
+    <a href="https://www.muse-hotels.com/" aria-label="Muse Hotel Saint TropezBooking" target="_blank">${makeBooking}</a></p>
     </div>`
 },
 {
@@ -595,13 +654,13 @@ const hotelsLocations = [{
     <p class="info-text">
     ${address}Chemin des Salins, 83990 Saint-Tropez, France
     <br>
-    <a href="https://www.saintamour-hotel.com/en/" target="_blank">${makeBooking}</a></p>
+    <a href="https://www.saintamour-hotel.com/en/" aria-label="Hôtel Saint Amour La Tartane" target="_blank">${makeBooking}</a></p>
     </div>`
 }];
 
 //Google map API created following the guides and adjusting code from https://developers.google.com/maps/documentation/javascript/how-tos
 
-// Init map is the initial map users will see
+/*Function for the initial map users will see, This is called from the API link  * at the bottom of the index.html file.*/
 function initMap() {
 
     mapOptions = {
@@ -616,8 +675,9 @@ function initMap() {
 //Function to loop through all markers to be called for each location map
 function addMarker(locations) {
 
+    /* If statement to check if a locations parameter has been passed to loop and create markers */
     if (locations) {
-        // For loop to loop through all the locations
+        /* For loop to iterate through all the locations and create markers for each one */
         for (let i = 0; i < locations.length; i++) {
             let marker = new google.maps.Marker({
                 position: locations[i].coords,
@@ -625,13 +685,15 @@ function addMarker(locations) {
                 animation: google.maps.Animation.DROP,
             });
 
-            //Create infoWindow for the content in the locations arrays
+            //Createing infoWindow for the content in the locations arrays
             let infoWindow = new google.maps.InfoWindow({
                 content: locations[i].content,
             });
-            
+
+            //Event listener to open info window when a marker is clicked
             google.maps.event.addListener(marker, 'click', function () {
                 infoWindow.open(map, marker);
+                //If statement to close previous info window if another is clicked
                 if (currWindow != null) {
                     currWindow.close();
                 }
@@ -645,7 +707,7 @@ function addMarker(locations) {
     }
 }
 
-//New map created to be displayed when clicked on the "Beaches" Button
+//Function to create new map "Beaches" CTA is clicked
 function initMapBeach(locations) {
 
     mapOptions = {
@@ -657,7 +719,7 @@ function initMapBeach(locations) {
 
 }
 
-//New map created to be displayed when clicked on the "Vineyards" Button
+//Function to create new map when "Vineyards" CTA is clicked
 function initMapVineyards(locations) {
 
     mapOptions = {
@@ -669,7 +731,7 @@ function initMapVineyards(locations) {
 
 }
 
-//New map created to be displayed when clicked on the "Restaurants" Button
+//Function to create new map when "Restaurants" CTA is clicked
 function initMapRestaurants(locations) {
 
     mapOptions = {
@@ -681,7 +743,7 @@ function initMapRestaurants(locations) {
 
 }
 
-//New map created to be displayed when clicked on the "Hotels" Button
+//Function to create new map when "Hotels" CTA is clicked
 function initMapHotels(locations) {
 
     mapOptions = {
@@ -692,26 +754,25 @@ function initMapHotels(locations) {
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
-//Event listener when clicking 'Beach' CTA
+/*Event listeners to open the different maps for each CTA and add the appropriate markers. When a button is clicked a different map with center location and zoom and markers will appear to the user. */
 document.getElementById("beach-clubs").addEventListener("click", function () {
     initMapBeach(beachLocations);
     addMarker(beachLocations);
 });
 
-//Event listener when clicking 'Vineyard' CTA
 document.getElementById("vineyards").addEventListener("click", function () {
     initMapVineyards(vineyardLocations);
     addMarker(vineyardLocations);
 });
 
-//Event listener when clicking 'Restaurant' CTA
 document.getElementById("restaurants").addEventListener("click", function () {
     initMapRestaurants(restaurantsLocations);
     addMarker(restaurantsLocations);
 });
 
-//Event listener when clicking 'Hotel' CTA
 document.getElementById("hotels").addEventListener("click", function () {
     initMapHotels(hotelsLocations);
     addMarker(hotelsLocations);
 });
+
+window.onload = initMap; // Loads initMap with St Tropez co-ords straight away
