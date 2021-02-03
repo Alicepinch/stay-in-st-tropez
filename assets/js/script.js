@@ -2,7 +2,9 @@
 const detailsButton = document.getElementsByClassName("reco-button")
 const watchVideo = document.getElementById("video-btn");
 const videoContainer = document.getElementsByClassName("video-container");
-const moreDetails = document.getElementsByClassName("more-details")
+const moreDetails = document.getElementsByClassName("more-details");
+const scrollButton = document.getElementById("scroll-top");
+
 
 //Hides the following components when document is ready
 $(function () {
@@ -11,7 +13,7 @@ $(function () {
 });
 
 /* Slideshow created following the Snook tutorial https://snook.ca/archives/javascript/simplest-jquery-slideshow using jQuery */
-// Function fades in and out from different images producing a slideshow effect
+// Function fades in and out from different images producing a slideshow effect 
 $(function () {
     $('.slideshow img:gt(0)').hide();
     setInterval(function () {
@@ -24,7 +26,6 @@ $(function () {
     },
         6000);
 });
-//End of credit
 
 //Click events for the "Watch Video" CTA
 $(watchVideo).click(function () {
@@ -55,15 +56,13 @@ $(detailsButton).click(function () {
 //End of jQuery
 
 // On scroll button created and adjusted from following WS3schools tutorial
-//Assigning the scroll function to window on scroll
-window.onscroll = scrollToTop;
+window.onscroll = scrollToTop; // Assigns scroll function to window on scroll
 
 //Function displays the button to user when they have scolled 200px from top
 function scrollToTop() {
 
     let scrollHeight = 200;
-    let scrollButton = document.getElementById("scroll-top");
-
+    
     if (document.body.scrollTop > scrollHeight || document.documentElement.scrollTop > scrollHeight) {
         scrollButton.style.display = "block";
     } else {
@@ -72,8 +71,8 @@ function scrollToTop() {
 
 }
 
-/* Function sets the location as 0px from top of the page. This function is called on the "Scroll-top" button in the index.html file */
-function topOfPage() {
+// On click function to take customer to top of page when button is clicked
+$(scrollButton).click(function(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}
+})
