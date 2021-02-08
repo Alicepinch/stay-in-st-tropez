@@ -124,6 +124,10 @@ Simple footer implemented with social links.
 
 This website is responsive and can be used across web browsers and different device sizes. Max-width was used for the different component sections to ensure that this could be scaled up as well as down correctly. 
 
+### 404 page
+
+A 404 page has been created and styled so that if a user was to try and access a page that was not available or the user misspelled the web domain name then the 404 page could take them back to the homepage. 
+
 #### Future Features
 
 - A subscription modal so users can sign up and recieve newsletters on all things St Tropez. 
