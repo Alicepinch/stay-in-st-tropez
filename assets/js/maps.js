@@ -660,6 +660,8 @@ const hotelsLocations = [{
 
 //Google map API created following the guides and adjusting code from https://developers.google.com/maps/documentation/javascript/how-tos
 
+window.onload = initMap; // Loads initMap with St Tropez co-ords straight away
+
 /*Function for the initial map users will see, This is called from the API link  * at the bottom of the index.html file.*/
 function initMap() {
 
@@ -754,7 +756,9 @@ function initMapHotels(locations) {
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
-/*Event listeners to open the different maps for each CTA and add the appropriate markers. When a button is clicked a different map with center location and zoom and markers will appear to the user. */
+/*Event listeners to open the different maps for each CTA and add the 
+* appropriate markers. When a button is clicked a different map with center 
+* location and zoom and markers will appear to the user. */
 document.getElementById("beach-clubs").addEventListener("click", function () {
     initMapBeach(beachLocations);
     addMarker(beachLocations);
@@ -775,4 +779,3 @@ document.getElementById("hotels").addEventListener("click", function () {
     addMarker(hotelsLocations);
 });
 
-window.onload = initMap; // Loads initMap with St Tropez co-ords straight away
