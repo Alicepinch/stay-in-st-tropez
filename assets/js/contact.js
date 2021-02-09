@@ -1,6 +1,3 @@
-//Set const variable for submit button
-const submitButton = document.getElementById("submit-button");
-
 function sendMail(contactForm) {
     emailjs.send("service_6asdbl8", "stay-in-st-tropez", {
         "from_name": contactForm.fname.value,
