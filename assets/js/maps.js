@@ -757,8 +757,8 @@ function initMapHotels(locations) {
 }
 
 /*Event listeners to open the different maps for each CTA and add the 
-* appropriate markers. When a button is clicked a different map with center 
-* location and zoom and markers will appear to the user. */
+appropriate markers. When a button is clicked a different map with center 
+location and zoom and markers will appear to the user. */
 document.getElementById("beach-clubs").addEventListener("click", function () {
     initMapBeach(beachLocations);
     addMarker(beachLocations);

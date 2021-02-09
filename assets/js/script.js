@@ -5,7 +5,6 @@ const videoContainer = document.getElementsByClassName("video-container");
 const moreDetails = document.getElementsByClassName("more-details");
 const scrollButton = document.getElementById("scroll-top");
 
-
 //Hides the following components when document is ready
 $(function () {
     $(videoContainer).hide();
@@ -26,6 +25,7 @@ $(function () {
     },
         6000);
 });
+//End of credit
 
 //Click events for the "Watch Video" CTA
 $(watchVideo).click(function () {
@@ -53,9 +53,7 @@ $(detailsButton).click(function () {
     }
 });
 
-//End of jQuery
-
-// On scroll button created and adjusted from following WS3schools tutorial
+// On scroll button adjusted from following WS3schools
 window.onscroll = scrollToTop; // Assigns scroll function to window on scroll
 
 //Function displays the button to user when they have scolled 200px from top

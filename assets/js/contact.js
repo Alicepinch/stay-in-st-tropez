@@ -1,5 +1,3 @@
-
-
 function sendMail(contactForm) {
 
     emailjs.send("service_6asdbl8", "stay-in-st-tropez", {
