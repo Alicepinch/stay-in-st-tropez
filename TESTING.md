@@ -125,7 +125,7 @@ The contact us form has been tested with different scenarios.
 
 - When an empty form was submitted > The webpage prompted me to fill in the first mandatory field. 
    - Each form field was filled in one after another with submitting after each one to check that all required form fields were working until a successful form was submitted. 
-- The form was filled in with an invalid email address (missing ".co.uk"). The webpage prompted me to enter a real email address.
+- The form was filled in with an invalid email address (missing "@"). The webpage prompted me to enter a real email address.
 - When testing the 'subject' field was not mandatory so this was fixed during testing.
 - After fixing this, when all form fields were completed correctly the form was submitted successfully and an alert prompted that the form has been submitted.
 - To ensure that the emailJS form functionality was working correctly, the form was linked to my personal email to check the inquiries that come through.
