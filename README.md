@@ -27,8 +27,8 @@ The UX goal for this website is to provide users with information about St Trope
 
 #### User stories:
 
-- As a user I would like to explore the different Restaurants I can visit. 
-- As a user I would like to explore the different Beachs I can visit.
+- As a user I would like to explore the different Restaurants I can visit.
+- As a user I would like to explore the different Beaches I can visit.
 - As a user I would like to explore the different Vineyards I can visit.
 - As a user I would like to explore the different Hotels I can stay if I visit.
 - As a user I would like to be able to get in contact in case of further questions/information.
@@ -45,7 +45,7 @@ The UX goal for this website is to provide users with information about St Trope
 - To provide useful information to the user if they want to visit St Tropez.
 - For the site to be easy to use and navigate with a simple but aesthetically pleasing design.
 - To include multiple options for different activities and things to do as well as places users could Stay in St Tropez.
-- To create an experience so that a user would like to revisit the website and the information provided.
+- To create a pleasant experience so that a user would like to revisit the website and the information provided.
 - To showcase all skills learnt from HTML, CSS and Javascript.
  
 ### Scope 
@@ -55,7 +55,7 @@ The UX goal for this website is to provide users with information about St Trope
 - Page Heading & Navigation
 - Interactive buttons to display content throughout
 - Google Maps API
-- Working Contact form with emailJS 
+- Working Contact form with EmailJS 
 - Footer with social links
 - Recommendations which will change when different buttons are selected
 
@@ -72,13 +72,13 @@ This website will be built with desktop in mind however it will be optimized for
 ### Surface
 
 #### Design:
-For the overall design of this project I wanted it to be simple yet asthetically pleasing ensuring I captured the look and feel of the South of France throughout.
+For the overall design of this project I wanted it to be simple yet aesthetically pleasing ensuring I captured the look and feel of the South of France throughout.
 
 #### Typography:
 The fonts that I have decided to use for this project are Poppins and Roboto from Googlefonts. The fall back font chosen is sans-sherif. Poppins has been used for all headings and Roboto for all other text on the website. I chose these fonts as they were simple, clean and complimented each other well.
 
 #### Colour Scheme
-The colours used on the website were chosen as these are the colours usually associated with the South of France. Lavender is the flower of the Provence so I wanted to ensure that this was used throughout. The beige background represents the buildings and the brown represents the classic shutter you would find on a french chateau. As the colours that have been used are soft I chose to use a shade of grey too compliment this for the body text, website name and logo. The lavender has been used for all CTA's, links and subheadings on the website. The brown has been used as the hover colour for all links and CTA's. 
+The colours used on the website were chosen as these are the colours usually associated with the South of France. Lavender is the flower of the Provence so I wanted to ensure that this was used throughout. The beige background represents the buildings and the brown represents the classic shutter you would find on a French chateau. As the colours that have been used are soft, I chose to use a shade of grey to compliment this for the body text, website name and logo. The lavender has been used for all CTA's, links and subheadings on the website. The brown has been used as the hover colour for all links and CTA's. 
 
 ![Colour Pallet](docs/readme/st-tropez-colour-pallett.png)
 
@@ -90,15 +90,15 @@ When first entering the website the user is presented with a hero slideshow with
 
 #### Watch Video CTA
 
-The 'About St Tropez' section features a 'Watch Video' CTA which users can click on to display a promotional youtube video for St Tropez. 
+The 'About St Tropez' section features a 'Watch Video' CTA which users can click on to display a promotional YouTube video for St Tropez. 
 
 #### Google Map API
 
-The 'Explore St Tropez' section of the website features an interactive google map API where customers are able to view different locations by clicking on one of the the buttons above the map. 
+The 'Explore St Tropez' section of the website features an interactive google map API where customers are able to view different locations by clicking on one of the buttons above the map. 
 
 #### Scroll to top button
 
-When a user scrolls 40px from the top of the page then a button with an arrow pointing to the top of the page appears. This feature allows the user to get back to the top of the page easily as there is no fixed navigation.
+When a user scrolls 200px from the top of the page then a button with an arrow pointing to the top of the page appears. This feature allows the user to get back to the top of the page easily as there is no fixed navigation.
 
 #### EmailJS form
 
@@ -114,7 +114,7 @@ A navigation has been implemented at the top of the page with anchor links to th
 
 #### Accessibility
 
-Aria-labels and alt attributes added to all links and images across the website to ensure it meets all accesibility needs. 
+Aria-labels and alt attributes added to all links and images across the website to ensure it meets all accessibility needs. 
 
 #### Footer
 
@@ -130,7 +130,7 @@ A 404 page has been created and styled so that if a user was to try and access a
 
 #### Future Features
 
-- A subscription modal so users can sign up and recieve newsletters on all things St Tropez. 
+- A subscription modal so users can sign up and receive newsletters on all things St Tropez. 
 - An option for customers to switch between French content and English content.
 - Different recommendations appearing depending on which button was clicked in the 'Explore' area (This was outlined in planned features however there was no time to implement this so it would be a future feature)
 - A list of all locations next to the map when the buttons are clicked so the information is clear.
@@ -139,8 +139,8 @@ A 404 page has been created and styled so that if a user was to try and access a
 
 - [JQuery](https://jquery.com)
   - The project uses JQuery to simplify DOM manipulation.
-- Javascript 
-  - The project uses javascript to create interactive elements and link API's.
+- JavaScript 
+  - The project uses JavaScript to create interactive elements and link API's.
 - HTML 
   - The main structure of this website was built using HTML5
 - CSS 
@@ -148,7 +148,7 @@ A 404 page has been created and styled so that if a user was to try and access a
 - [Google map API's](https://developers.google.com/maps/documentation/javascript/examples)
   - This project used Google map API's to implement an interactive map.
 - [EmailJS API](https://emailjs.com/) 
-   - emailJS was used to link any user inquiries through to an email.
+   - EmailJS was used to link any user inquiries through to an email.
 
 ### Other tools used
 
@@ -165,8 +165,8 @@ A 404 page has been created and styled so that if a user was to try and access a
 - [freelogodesign](https://www.freelogodesign.org/) - To create the logo for Stay In St Tropez.
 - [Favicon generator](https://www.favicon-generator.org/) - To convert the logo into a favicon.ico file.
 - [Snook](https://snook.ca/archives/javascript/simplest-jquery-slideshow) - Used to help with the slideshow at the top of the page. 
-- [JShint](https://jshint.com/) - To test javascript.
-- [W3cValidator](https://validator.w3.org/) - Used to check HTML and css for any issues.
+- [JShint](https://jshint.com/) - To test JavaScript.
+- [W3cValidator](https://validator.w3.org/) - Used to check HTML and CSS for any issues.
 - [Free formatter](https://www.freeformatter.com/css-beautifier.html#ad-output) - Used to beautify CSS code.
 
 ## Testing
@@ -175,11 +175,11 @@ All the testing carried out for Stay In St Tropez can be found [here](TESTING.md
 
 ## Deployment
 
-This project was created in Gitpod workspaces and pushed to Github regularly. To deploy this project to github the process was:
+This project was created in Gitpod workspaces and pushed to GitHub regularly. To deploy this project to GitHub the process was:
 
-- Open the 'Stay-in-st-tropez'repository on github
+- Open the 'Stay-in-st-tropez' repository on GitHub
 - Go to settings
-- Scroll down to 'Github pages' section
+- Scroll down to 'GitHub pages' section
 - Select the master branch as the source, save these changes.
 - After refreshing the page the repo is published and the URL is generated.
 - The Stay In St Tropez page can be accessed via: https://alicepinch.github.io/stay-in-st-tropez/
@@ -188,23 +188,23 @@ This project was created in Gitpod workspaces and pushed to Github regularly. To
 In order to clone a local copy of a repository to your computer you need to follow the following steps.
 
 - Click on the 'Code' button next to 'Add a file' when you have opened a repository
-- To clone your respository by https:// click on the clipboard icon next to the URL.
+- To clone your repository by https:// click on the clipboard icon next to the URL.
 - Once you have done this, open the terminal
 - The current directory will need to be changed to where you want your cloned directory.
 - Type 'git clone' and then paste in your URL from the earlier steps ($ git clone https://github.com/alicepinch/stay-in-st-tropez)
 - Press enter
 
-More details can be found via the [github docs.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+More details can be found via the [GitHub docs.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 ## Credits
 
 - The google map API's were created following the google map tutorials available https://developers.google.com/maps/documentation/javascript/example and the code was adjusted and modified for my needs for this project. 
-- Youtube https://www.youtube.com/watch?v=09ck9iz4fEw&t=129s for the video used on webpage. 
+- YouTube https://www.youtube.com/watch?v=09ck9iz4fEw&t=129s for the video used on webpage. 
 - All phone numbers and addresses and booking URL's were taken from google. 
 
 ### Content
 
-- Content was mostly writen by myself from visiting the area many times with the help of wikipidea and google maps.
+- Content was mostly written by myself from visiting the area many times with the help of wikipidea and google maps.
 
 ### Media
 

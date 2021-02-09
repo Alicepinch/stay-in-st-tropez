@@ -1,15 +1,15 @@
 # Testing
 
-During the building process of this website I was regularly checking Developer tools, WS3 code validators to test the responsiveness and performance of the website and JShint to check for any major errors in my Javascript. Below is all the testing I ran and all of the changes that I made to improve on any issues that I encountered. 
+During the building process of this website I was regularly checking Developer tools, WS3 code validators to test the responsiveness and performance of the Website and JShint to check for any major errors in my JavaScript. Below is all the testing I ran and all of the changes that I made to improve on any issues that I encountered. 
 
 ### Lighthouse:
 ---
 
 When checking the lighthouse in the developer tools, Google suggested some things to improve the reports.
 
-- In order to improve best practices I added rel=noopener to all 'a' links.
-- To improve performance I compressed all images using TinyPNG.
-- To improve accessibility I added aria-lables and alt attributes to all links and images. 
+- In order to improve best practices, I added rel=noopener to all 'a' links.
+- To improve performance, I compressed all images using TinyPNG.
+- To improve accessibility, I added aria-labels and alt attributes to all links and images. 
 
 Please note that the 'Performance' report is lower than the others, this is because of the slideshow displaying different images at different times. These images were not converted to a next generation format due to compatibility with safari browser.  
 
@@ -31,23 +31,23 @@ All links have been tested to ensure for the best UX.
 - Phone numbers all give the option to call the numbers directly on phone and desktop.
 - All links have aria-labels for accessibility.
 
-When testing the instagram, twitter, facebook and Pinterest links these all open in a new tab to the social media homepages. This is expected behaviour as Stay In St Tropez doesn't have its own pages on these platforms.  
+When testing the Instagram, Twitter, Facebook and Pinterest, all links open in a new tab to the social media homepages. This is expected behaviour as Stay In St Tropez doesn't have its own pages on these platforms.  
 
 ### Button Testing
 ---
 
 All buttons have been tested to check they perform correctly: 
 
-- The 'Scroll to top' CTA displays displays in the bottom right corner when the user has scrolled down 200px from the top of the page. When clicked this takes the customer to the top of the page and is reacting in the correct way. 
+- The 'Scroll to top' CTA displays in the bottom right corner when the user has scrolled down 200px from the top of the page. When clicked this takes the customer to the top of the page and is reacting in the correct way. 
 
-- The 'Watch Video' CTA displays a youtube video to users onclick, once open the button text changes to 'Hide Video' and the 'active' class is added turning the button brown. When closed the button goes back to its original state.
+- The 'Watch Video' CTA displays a YouTube video to users onclick, once open the button text changes to 'Hide Video' and the 'active' class is added turning the button brown. When closed the button goes back to its original state.
 
-- The 'More Details' CTA's display more details onclick. once opened the button text also changes to 'Hide Details' and the 'active' class is added turning the button brown. When closed the button goes back to its original state.
+- The 'More Details' CTA's display more details onclick. Once opened the button text also changes to 'Hide Details' and the 'active' class is added turning the button brown. When closed the button goes back to its original state.
 
 ### Map Testing 
 ---
 
-When testing the webpage the first initMap would not always load straight away. This wasn't the best UX for the user so to solve this I added the following code to the maps.js file. 
+When testing the webpage, the first initMap would not always load straight away. This wasn't the best UX for the user so to solve this I added the following code to the maps.js file. 
 
 ```
 window.onload = initMap 
@@ -56,7 +56,7 @@ window.onload = initMap
 
 The console was also returning the following error "initMap is not a function"
 
-In order to fix this I revisited the google map API's website to view the correct script needed for the google map API and removed 'async' from my code
+In order to fix this, I revisited the google map API's website to view the correct script needed for the google map API and removed 'async' from my code
 
 ```
 
@@ -66,7 +66,7 @@ In order to fix this I revisited the google map API's website to view the correc
 
 ```
 
-When testing the map I noticed that there was no sign to the user as to which button was clicked in the explore section. In order to fix this I added a focus style for the .map-button class.
+When testing the map, I noticed that there was no sign to the user as to which button was clicked in the explore section. In order to fix this I added a focus style for the .map-button class.
 
 ``` 
 .map-button:focus {
@@ -75,7 +75,7 @@ When testing the map I noticed that there was no sign to the user as to which bu
 }
 ```
 
-When testing the maps I noticed that when an info window was open and another marker was clicked on the current info window was not closing. This wasn't the best UX for the customers as the info windows were piling on-top of each other. To resolve this I added the below code into the event listener.
+When testing the maps, I noticed that when an info window was open and another marker was clicked on the current info window was not closing. This wasn't the best UX for the customers as the info windows were piling on-top of each other. To resolve this, I added the below code into the event listener.
 
 ```
  google.maps.event.addListener(marker, 'click', function () {
@@ -96,10 +96,10 @@ The map was re-tested when these issues were resolved and now performs in the co
 - When the different buttons are clicked for (Beaches, Restaurants, Vineyards and Hotels) the map below updates with the correct centre point and zoom view. 
 - Whichever button the user has clicked will turn brown.
 - All markers drop onto the map correctly when different buttons are selected.
-- When a marker is clicked an info window appears with the appropriate information.
-- When another marker is clicked the current info window closes and the new one opens. 
+- When a marker is clicked an 'info' window appears with the appropriate information.
+- When another marker is clicked the current 'info' window closes and the new one opens. 
 - Each marker has the relevant content with correct address, phone number or booking link. 
-- All links in the info window open in a new tab.
+- All links in the 'info' window open in a new tab.
 
 
 ### WS3 Validator:
@@ -114,7 +114,7 @@ When doing the final checks there were no issues with the code. The only errors 
 ### JSHint
 ---
 
-Javascript was ran through the JS Hint validator to check there were no major issues with the code. 
+JavaScript was run through the JS Hint validator to check there were no major issues with the code. 
 
 When running my different scripts through JSHint there were a couple 'warnings' of missing semicolons or unnecessary semicolons. These were either removed or added accordingly. 
 
@@ -130,7 +130,7 @@ The contact us form has been tested with different scenarios.
 - After fixing this, when all form fields were completed correctly the form was submitted successfully and an alert prompted that the form has been submitted.
 - To ensure that the emailJS form functionality was working correctly, the form was linked to my personal email to check the inquiries that come through.
 
-When testing the form I noticed that the form fields were still populated when pressing submit. In order to fix this I added in the following JS code to clear form fields:
+When testing the form, I noticed that the form fields were still populated when pressing submit. In order to fix this, I added in the following JS code to clear form fields:
 
 ``` 
         document.getElementById("contact_form").reset();  
@@ -154,7 +154,7 @@ This website has been cross checked on the below devices and browsers to test re
 - Google Chrome
 - Firefox 
 
-When testing in mobile view I noticed a couple of the headers were slightly too big and overhung on some of the sections. In order to fix this I added in media queries to the CSS file with a (max-width: 767px) and decreased the font size of the H1, H2, H3 and P's for smaller screens. The media queries I added for mobile view can be found at the bottom of my [CSS File.](assets/css/style.css)
+When testing in mobile view, I noticed a couple of the headers were slightly too big and overhung on some of the sections. In order to fix this, I added in media queries to the CSS file with a (max-width: 767px) and decreased the font size of the H1, H2, H3 and P's for smaller screens. The media queries I added for mobile view can be found at the bottom of my [CSS File.](assets/css/style.css)
 
 This has also been run through [Ami Responsive](http://ami.responsivedesign.is/ and checked with developer tools regularly to ensure that the website is responsive.
 
@@ -169,16 +169,16 @@ As a user I would like to explore the different Restaurants I can visit.
   - A user is able to view a selection of different Restaurants when clicking on the 'Restaurants' CTA in the Explore section of the website. They will also be able to view our Top recommendation Restaurant in the section below. 
 
 As a user I would like to explore the different Beaches I can visit.
- - A user is able to access the explore section via the Navigation or scrolling down the page where they can select the Beaches CTA which will display different markers of beaches to visit with the Address and a booking phone number. 
+ - A user is able to access the 'Explore' section via the Navigation or scrolling down the page where they can select the Beaches CTA which will display different markers of beaches to visit with the address and a booking phone number. 
 
 As a user I would like to explore the different Vineyards I can visit.
- - A user is able to access the 'Explore' section via the Navigation or scrolling down the page where they can select the Vineyards CTA which will display different markers of beaches to visit with the Address and a booking phone number. 
+ - A user is able to access the 'Explore' section via the navigation or scrolling down the page where they can select the Vineyards CTA which will display different markers of beaches to visit with the address and a booking phone number. 
 
 As a user I would like to explore the different Hotels I can stay if I visit.
- - A user is able to access the explore section via the Navigation or scrolling down the page where they can select the Hotels CTA which will display different markers of beaches to visit with the Address and a booking phone number. 
+ - A user is able to access the explore section via the navigation or scrolling down the page where they can select the Hotels CTA which will display different markers of hotels to visit with the Address and a booking phone number. 
 
 As a user I would like to be able to get in contact in case of further questions/information.
- - A user can either access the Contact form from the link in the navigation or from scrolling down the page. There is also a anchor link within the 'Explore' section which will take the user to the contact form.
+ - A user can either access the Contact form from the link in the navigation or from scrolling down the page. There is also an anchor link within the 'Explore' section which will take the user to the contact form.
 
 As a user I would like to get a vibe of the area and gain some basic background information.
  - The image slideshow at the top of the webpage will give the user some visuals of what St Tropez looks like, the colour scheme used throughout tries to capture this as well. The user can also view the video in the About section and gain some information from the introduction text. 
@@ -186,12 +186,8 @@ As a user I would like to get a vibe of the area and gain some basic background 
 #### Returning User:
 
 As a returning user I would like to be able to get in contact for further information.
- - A returning user can access the Contact form from the link in the navigation or from scrolling down the page. There is also a anchor link within the 'Explore' section which will take the user to the contact form.
+ - A returning user can access the Contact form from the link in the navigation or from scrolling down the page. There is also an anchor link within the 'Explore' section which will take the user to the contact form.
 
 As a returning user I would like to be able to view all of the current locations on the map/ and any new ones that may have been added. 
- - A user can access the map via the Explore section and click through the different CTA's to display the different location markers. In the future returning users would also be able to save locations of where they would like to visit. 
-
-
-
-
-
+ - A returning user can access the map via the Explore section and click through the different CTA's to display the different location markers. In the future returning users would also be able to save locations of where they would like to visit. 
+ - A returning user would be able to see new locations added with the future elements implemented. If a customer was to subscribe to the newsletter they would be able to view new locations and click through to view these on the webpage.
