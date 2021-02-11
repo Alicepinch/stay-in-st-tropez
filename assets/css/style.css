@@ -146,24 +146,21 @@ a:hover {
 	color: #fff;
 	padding: .5rem 1rem .5rem 1rem;
 	border-radius: 30px;
-	border: #B7A3D0;
+	border: #886ead;
 	margin-bottom: 1rem;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 	transition: all 300ms ease-in;
 	outline: none !important;
 }
 
-.button-purple:hover,
 .active {
 	background-color: #897261;
-	color: #fff;
 }
 
-.map-button:hover,
-.map-button:focus {
+.map-button:focus,
+.map-button:hover {
 	background-color: #897261;
-	color: #fff;
-}
+} 
 
 #scroll-top {
 	display: none;
@@ -334,4 +331,9 @@ textarea:focus {
 	.recommendation button {
 		margin-bottom: 1rem;
     }
+
+    .button-purple:hover {
+        background-color: #897261;
+    }
+
 }
