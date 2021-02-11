@@ -9,11 +9,9 @@ const scrollButton = document.getElementById("scroll-top");
 $(function () {
     $(videoContainer).hide();
     $(moreDetails).hide();
-});
 
-/* Slideshow created following the Snook tutorial https://snook.ca/archives/javascript/simplest-jquery-slideshow using jQuery */
-// Function fades in and out from different images producing a slideshow effect 
-$(function () {
+    /* Slideshow created following the Snook tutorial https://snook.ca/archives/javascript/simplest-jquery-slideshow using jQuery */
+    // Function fades in and out from different images producing a slideshow effect 
     $('.slideshow img:gt(0)').hide();
     setInterval(function () {
         $('.slideshow :first-child')
@@ -25,7 +23,6 @@ $(function () {
     },
         6000);
 });
-//End of credit
 
 //Click events for the "Watch Video" CTA
 $(watchVideo).click(function () {
