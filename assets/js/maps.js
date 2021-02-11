@@ -328,8 +328,7 @@ const vineyardLocations = [{
     ${address}Route des Plages, 83990 Saint-Tropez, France
     <br>
     ${contact}<a href="tel:+33494970160">+33 4 94 97 01 60</a>
-    <br>
-    <a href="https://www.torpez.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
+    <br></p>
     </div>`
 }, {
     //Maison Angelvin
