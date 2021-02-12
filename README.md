@@ -126,7 +126,7 @@ This website is responsive and can be used across web browsers and different dev
 
 ### 404 page
 
-A 404 page has been created and styled so that if a user was to try and access a page that was not available or the user misspelled the web domain name then the 404 page could take them back to the homepage. In order to create the 404 page I followed the instructions on [GitHub docs.](https://docs.github.com/en/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+A custom 404 page was added to the Website that contains an anchor link to allow the user to direct back to the homepage if they try to access a page that is not available. In order to create the 404 page I followed the instructions on [GitHub docs.](https://docs.github.com/en/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
 
 #### Future Features
 
