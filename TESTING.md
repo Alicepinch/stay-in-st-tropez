@@ -165,9 +165,8 @@ This website has been cross checked on the below devices and browsers to test re
 - iPad 
 - iMac
 - Macbook Pro 13inch 
-- Internet Explorer
 - Microsoft edge
-- Safari 
+- Safari - "Scroll-behaviour:smooth" does not work on safari.
 - Google Chrome
 - Firefox 
 
