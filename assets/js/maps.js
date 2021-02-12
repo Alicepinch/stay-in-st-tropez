@@ -1,18 +1,18 @@
-// Constant variables for the locations for the initMaps for Google API
+//Locations for the initMaps for Google API
 const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
 const pampellone = { lat: 43.22816264096342, lng: 6.649391087955331 };
 const cogolin = { lat: 43.305768388687284, lng: 6.557175604097107 };
 const stTropezTown = { lat: 43.25842782566118, lng: 6.657048252167533 };
 const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 };
 
-//Constant variables to be used for String Interpolation in the location arrays
+//String Interpolation's for location arrays
 const address = `<strong>Address: </strong>`;
 const book = `<strong>Book Now: </strong>`;
 const makeBooking = `Make A Booking`;
 const contact = `<strong>Contact: </strong>`;
 const website = `Visit Website`;
 
-//Global variable created to be assinged within map functions
+//Global variables to be assinged within map functions
 let mapOptions;
 let map;
 
@@ -54,7 +54,7 @@ const beachLocations = [{
     <a href="https://www.lareserve-ramatuelle.com/en/special-offers/la-reserve-la-plage/" target="_blank" aria-label="Visit Website">${website}</a></p>
    </div>`
 }, {
-    // Indie beach house
+    //Indie beach house
     coords: {
         lat: 43.213635,
         lng: 6.663711
@@ -71,7 +71,7 @@ const beachLocations = [{
     <a href="https://www.indiebeachhouse.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    // Verde by Yeeels
+    //Verde by Yeeels
     coords: {
         lat: 43.220365,
         lng: 6.662333
@@ -86,7 +86,7 @@ const beachLocations = [{
     <a href="http://verde-beach.com/fr_fr/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    // La serena
+    //La serena
     coords: {
         lat: 43.225180432602436,
         lng: 6.6621437043536575
@@ -101,7 +101,7 @@ const beachLocations = [{
     <a href="https://www.la-serena.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    // Le Club 55
+    //Le Club 55
     coords: {
         lat: 43.22756587461226,
         lng: 6.66138701442197
@@ -116,7 +116,7 @@ const beachLocations = [{
     <a href="https://www.club55.fr/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    //  Tiki club
+    //Tiki club
     coords: {
         lat: 43.2337601876218,
         lng: 6.662992767265478
@@ -131,7 +131,7 @@ const beachLocations = [{
     <a href="https://www.riviera-villages.com/Kon-Tiki/Restaurants-Commerces/Restaurants-Bars/Le-Tiki-Club" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    //  Bagatelle St Tropez
+    //Bagatelle St Tropez
     coords: {
         lat: 43.23475505131009,
         lng: 6.662593225615649
@@ -146,7 +146,7 @@ const beachLocations = [{
     <a href="https://bagatellesttropez.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    //  Shellona
+    //Shellona
     coords: {
         lat: 43.237680614465525,
         lng: 6.662758165624775
@@ -161,7 +161,7 @@ const beachLocations = [{
     <a href="https://shellonabeach.com/en/shellona-2/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    //  Plage Restaurant L'Orangerie
+    //Plage Restaurant L'Orangerie
     coords: {
         lat: 43.23808248164883,
         lng: 6.663513436392091
@@ -176,7 +176,7 @@ const beachLocations = [{
     <a href="http://www.plage-orangerie.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    //  Club Les Palmiers Ramatuelle
+    //Club Les Palmiers Ramatuelle
     coords: {
         lat: 43.23883435507257,
         lng: 6.662888657437822
@@ -193,7 +193,7 @@ const beachLocations = [{
     <a href="http://www.clubpalmiers.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    //  Restaurant Tahiti Beach
+    //Restaurant Tahiti Beach
     coords: {
         lat: 43.244190824586596,
         lng: 6.666079775341165
@@ -210,7 +210,7 @@ const beachLocations = [{
     <a href="https://www.tahiti-beach.com/" target="_blank" aria-label="Visit Website">${website}</a></p>
     </div>`
 }, {
-    //  Tropezina Beach
+    //Tropezina Beach
     coords: {
         lat: 43.24500712500184,
         lng: 6.667101309880046
@@ -657,11 +657,11 @@ const hotelsLocations = [{
     </div>`
 }];
 
-//Google map API created following the guides and adjusting code from https://developers.google.com/maps/documentation/javascript/how-tos
+/* Google map API created following the guides and adjusting code from https://developers.google.com/maps/documentation/javascript/how-tos */
 
-window.onload = initMap; // Loads initMap with St Tropez co-ords straight away
+window.onload = initMap; //Loads initMap with St Tropez co-ords straight away
 
-/*Initial map users will see, This is called from the API link at the bottom of the index.html file.*/
+//Initial map that loads on page
 function initMap() {
 
     mapOptions = {
@@ -673,11 +673,10 @@ function initMap() {
 
 }
 
-
-//Adds markers for for each location map
+//Adds markers for for each map
 function addMarker(locations) {
 
-    // Iterates through all the locations and creates markers for each one
+    //Iterates through all the locations and creates markers for each one
     for (let i = 0; i < locations.length; i++) {
         let marker = new google.maps.Marker({
             position: locations[i].coords,
@@ -695,16 +694,15 @@ function addMarker(locations) {
         //Opens info window when a marker is clicked
         google.maps.event.addListener(marker, 'click', function () {
             infoWindow.open(map, marker);
-            //Closes info window if another is clicked
+            //Closes info window if another marker is clicked
             if (currWindow) {
                 currWindow.close();
             }
             currWindow = infoWindow;
-            
+
         });
     }
 }
-
 
 //Creates new map for beach locations
 function initMapBeach(locations) {
@@ -753,9 +751,9 @@ function initMapHotels(locations) {
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
-/*Event listeners to open the different maps for each CTA and add the 
-appropriate markers. When a button is clicked a different map with center 
-location and zoom and markers will appear to the user. */
+/* Event listeners open the different maps for each CTA and add the 
+appropriate markers. When the button is clicked a map with different center 
+location, zoom and markers will appear to the user. */
 document.getElementById("beach-clubs").addEventListener("click", function () {
     initMapBeach(beachLocations);
     addMarker(beachLocations);
