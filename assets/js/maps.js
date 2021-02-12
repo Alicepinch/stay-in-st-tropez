@@ -1,18 +1,18 @@
-// Setting constant variables for the locations for the initMaps for Google API
+// Constant variables for the locations for the initMaps for Google API
 const stTropez = { lat: 43.23223137004324, lng: 6.648551015233651 };
 const pampellone = { lat: 43.22816264096342, lng: 6.649391087955331 };
 const cogolin = { lat: 43.305768388687284, lng: 6.557175604097107 };
 const stTropezTown = { lat: 43.25842782566118, lng: 6.657048252167533 };
 const hotels = { lat: 43.24811013466114, lng: 6.633655222212774 };
 
-//Global variables to be used for String Interpolation in the location arrays
+//Constant variables to be used for String Interpolation in the location arrays
 const address = `<strong>Address: </strong>`;
 const book = `<strong>Book Now: </strong>`;
 const makeBooking = `Make A Booking`;
 const contact = `<strong>Contact: </strong>`;
-const website = `Visit Website`
+const website = `Visit Website`;
 
-//Global variable created to be assinged within functions
+//Global variable created to be assinged within map functions
 let mapOptions;
 let map;
 
@@ -661,7 +661,7 @@ const hotelsLocations = [{
 
 window.onload = initMap; // Loads initMap with St Tropez co-ords straight away
 
-/*Function for the initial map users will see, This is called from the API link  * at the bottom of the index.html file.*/
+/*Initial map users will see, This is called from the API link at the bottom of the index.html file.*/
 function initMap() {
 
     mapOptions = {
@@ -673,42 +673,40 @@ function initMap() {
 
 }
 
-//Function to loop through all markers to be called for each location map
+
+//Adds markers for for each location map
 function addMarker(locations) {
 
-    /* If statement to check if a locations parameter has been passed to loop and create markers */
-    if (locations) {
-        /* For loop to iterate through all the locations and create markers for each one */
-        for (let i = 0; i < locations.length; i++) {
-            let marker = new google.maps.Marker({
-                position: locations[i].coords,
-                map: map,
-                animation: google.maps.Animation.DROP,
-            });
+    // Iterates through all the locations and creates markers for each one
+    for (let i = 0; i < locations.length; i++) {
+        let marker = new google.maps.Marker({
+            position: locations[i].coords,
+            map: map,
+            animation: google.maps.Animation.DROP,
+        });
 
-            //Createing infoWindow for the content in the locations arrays
-            let infoWindow = new google.maps.InfoWindow({
-                content: locations[i].content,
-            });
+        //Creates infoWindow for the content in the locations arrays
+        let infoWindow = new google.maps.InfoWindow({
+            content: locations[i].content,
+        });
 
-            //Event listener to open info window when a marker is clicked
-            google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.open(map, marker);
-                //If statement to close previous info window if another is clicked
-                if (currWindow != null) {
-                    currWindow.close();
-                }
-                infoWindow.open(map, marker);
-                currWindow = infoWindow;
-            });
+        var currWindow = false;
 
-            var currWindow = null;
-
-        }
+        //Opens info window when a marker is clicked
+        google.maps.event.addListener(marker, 'click', function () {
+            infoWindow.open(map, marker);
+            //Closes info window if another is clicked
+            if (currWindow) {
+                currWindow.close();
+            }
+            currWindow = infoWindow;
+            
+        });
     }
 }
 
-//Function to create new map "Beaches" CTA is clicked
+
+//Creates new map for beach locations
 function initMapBeach(locations) {
 
     mapOptions = {
@@ -720,7 +718,7 @@ function initMapBeach(locations) {
 
 }
 
-//Function to create new map when "Vineyards" CTA is clicked
+//Creates new map for vineyard locations
 function initMapVineyards(locations) {
 
     mapOptions = {
@@ -732,7 +730,7 @@ function initMapVineyards(locations) {
 
 }
 
-//Function to create new map when "Restaurants" CTA is clicked
+//Creates new map for restaurants locations
 function initMapRestaurants(locations) {
 
     mapOptions = {
@@ -744,7 +742,7 @@ function initMapRestaurants(locations) {
 
 }
 
-//Function to create new map when "Hotels" CTA is clicked
+//Creates new map for hotel locations
 function initMapHotels(locations) {
 
     mapOptions = {
