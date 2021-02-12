@@ -67,7 +67,7 @@ The site will be built using just one page so a user can navigate through to the
 
 This website will be built with desktop in mind however it will be optimized for other devices. Wireframes were created using balsamiq.
 
-[WireFrames](docs/readme/stay-in-st-tropez-wireframes.png)
+[WireFrames](docs/readme/stay-in-st-tropez-wireframes.jpg)
 
 ### Surface
 
