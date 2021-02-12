@@ -65,9 +65,9 @@ The site will be built using just one page so a user can navigate through to the
 
 ### Skeleton
 
-This website will be built with desktop in mind however it will be optimized for other devices. Wireframes were created using balsamiq:
+This website will be built with desktop in mind however it will be optimized for other devices. Wireframes were created using balsamiq.
 
-![WireFrame](docs/readme/stay-in-st-tropez-wireframes.png)
+[WireFrames](docs/readme/stay-in-st-tropez-wireframes.png)
 
 ### Surface
 
@@ -80,7 +80,7 @@ The fonts that I have decided to use for this project are Poppins and Roboto fro
 #### Colour Scheme
 The colours used on the website were chosen as these are the colours usually associated with the South of France. Lavender is the flower of the Provence so I wanted to ensure that this was used throughout. The beige background represents the buildings and the brown represents the classic shutter you would find on a French chateau. As the colours that have been used are soft, I chose to use a shade of grey to compliment this for the body text, website name and logo. The lavender has been used for all CTA's, links and subheadings on the website. The brown has been used as the hover colour for all links and CTA's. 
 
-![Colour Pallet](docs/readme/st-tropez-colour-pallett.png)
+[Colour Pallet](docs/readme/st-tropez-colour-pallett.png)
 
 ## Features Implemented
 
