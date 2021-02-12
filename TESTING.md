@@ -18,7 +18,11 @@ Please note that the 'Performance' report is lower than the others, this is beca
 ### Debugging and checking the console:
 ---
 
-Throughout the building process the console was checked to ensure no errors were displaying. No major errors displayed in the console and shouldn't when the website is run. 
+Throughout the building process I checked the console for any errors. For example if an end curly bracket was ever missing from a function, I would use the console in developer tools to debug this, find the issue and fix it. 
+
+In the [Map Testing](#map-testing) section I have outlined one of the console errors that occured when building the Maps and how this was resolved. 
+
+No major errors should display in the console when the website is run now.
 
 ### Link Testing:
 ---
@@ -44,10 +48,19 @@ All buttons have been tested to check they perform correctly:
 
 - The 'More Details' CTA's display more details onclick. Once opened the button text also changes to 'Hide Details' and the 'active' class is added turning the button brown. When closed the button goes back to its original state.
 
+When testing the buttons in mobile view I noticed that when clicking on another button the ".active" class was not removing. The issue was that the "button-purple:hover" CSS styling was overriding this in mobile view. In order to fix this I moved the :hover so that it would only display on screens larger than 768px.
+
+```
+@media screen and (min-width: 768px) {
+	.button-purple:hover {
+		background-color: #897261;
+	}
+}
+```
 ### Map Testing 
 ---
 
-When testing the webpage, the first initMap would not always load straight away. This wasn't the best UX for the user so to solve this I added the following code to the maps.js file. 
+When testing the webpage, the first initMap would not always load straight away. This wasn't the best UX for the user. To solve this I added the following code to the maps.js file. 
 
 ```
 window.onload = initMap 
@@ -193,5 +206,6 @@ As a returning user I would like to be able to get in contact for further inform
  - A returning user can access the Contact form from the link in the navigation or from scrolling down the page. There is also an anchor link within the 'Explore' section which will take the user to the contact form.
 
 As a returning user I would like to be able to view all of the current locations on the map/ and any new ones that may have been added. 
- - A returning user can access the map via the Explore section and click through the different CTA's to display the different location markers. In the future returning users would also be able to save locations of where they would like to visit. 
+ - A returning user can access the map via the Explore section and click through the different CTA's to display the different location markers. 
+ - In the future returning users would also be able to save locations of where they would like to visit. 
  - A returning user would be able to see new locations added with the future elements implemented. If a customer was to subscribe to the newsletter they would be able to view new locations and click through to view these on the webpage.
