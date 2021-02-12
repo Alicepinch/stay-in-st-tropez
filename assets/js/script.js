@@ -26,7 +26,7 @@ $(function () {
 
 //Click events for the "Watch Video" CTA
 $(watchVideo).click(function () {
-    $(this).siblings(".video-container").slideToggle()
+    $(this).siblings(".video-container").slideToggle();
 
     if ($(this).html() === "Watch Video") {
         $(this).html("Hide Video");
@@ -57,7 +57,7 @@ window.onscroll = scrollToTop; // Assigns scroll function to window on scroll
 function scrollToTop() {
 
     let scrollHeight = 200;
-    
+
     if (document.body.scrollTop > scrollHeight || document.documentElement.scrollTop > scrollHeight) {
         scrollButton.style.display = "block";
     } else {
@@ -67,7 +67,7 @@ function scrollToTop() {
 }
 
 // On click function to take customer to top of page when button is clicked
-$(scrollButton).click(function(){
+$(scrollButton).click(function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-})
+});
