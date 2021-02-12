@@ -10,7 +10,7 @@ function sendMail(contactForm) {
             //Function changes the submit button when form submitted alerts user
             function () {
                 alert("Thank you for getting in touch, We will get back to you soon.");
-                document.getElementById("contact-form").reset(); 
+                document.getElementById("contact-form").reset();
             },
             //Function alerts user with error if the form was unsuccesful
             function (error) {
@@ -18,7 +18,7 @@ function sendMail(contactForm) {
             });
 
     // Clears the form fields after form is submitted
-    
+
 
     return false;
 }
