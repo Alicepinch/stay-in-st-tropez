@@ -7,18 +7,17 @@ function sendMail(contactForm) {
         "subject": contactForm.subject.value,
     })
         .then(
-            //Function changes the submit button when form submitted alerts user
+            //Returns success message if form submits correctly
             function () {
                 alert("Thank you for getting in touch, We will get back to you soon.");
-                document.getElementById("contact-form").reset();
             },
-            //Function alerts user with error if the form was unsuccesful
+            //Alerts user with error if the form was unsuccesful
             function (error) {
-                alert("Sorry something, please try again", error);
+                alert("Sorry something went wrong, please try again", error);
             });
 
     // Clears the form fields after form is submitted
-
+    document.getElementById("contact-form").reset();
 
     return false;
 }
