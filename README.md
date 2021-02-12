@@ -122,11 +122,11 @@ Simple footer implemented with social links.
 
 #### Responsiveness
 
-This website is responsive and can be used across web browsers and different device sizes. Max-width was used for the different component sections to ensure that this could be scaled up as well as down correctly. 
+This website is responsive and can be used across web browsers and different device sizes. Max-width was used for the different component sections to ensure that this could be scaled up as well as down correctly. Bootstrap was used for the components throughout to make them responsive to different screen sizes. 
 
 ### 404 page
 
-A 404 page has been created and styled so that if a user was to try and access a page that was not available or the user misspelled the web domain name then the 404 page could take them back to the homepage. In order to create the 404 page I followed the instructions on [GitHub.](https://docs.github.com/en/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+A 404 page has been created and styled so that if a user was to try and access a page that was not available or the user misspelled the web domain name then the 404 page could take them back to the homepage. In order to create the 404 page I followed the instructions on [GitHub docs.](https://docs.github.com/en/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
 
 #### Future Features
 
@@ -208,7 +208,7 @@ More details can be found via the [GitHub docs.](https://docs.github.com/en/gith
 
 ### Media
 
-The photos used in this site were all copyright free and taken from the following websites:
+The photos used on this website were all copyright free and taken from the following websites:
 
 - https://www.rawpixel.com/
 - https://www.pexels.com/
