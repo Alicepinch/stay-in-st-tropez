@@ -227,7 +227,6 @@ const beachLocations = [{
 }];
 
 //Vineyard Locations
-
 const vineyardLocations = [{
     //Domaine des Beaucas
     coords: {
@@ -378,7 +377,6 @@ const vineyardLocations = [{
 }];
 
 //Restaurant locations
-
 const restaurantsLocations = [{
     //Senequier
     coords: {
@@ -509,7 +507,6 @@ const restaurantsLocations = [{
 }];
 
 //Hotels locations
-
 const hotelsLocations = [{
     //Hotel La Garbine Ramatuelle | Séminaires À St Tropez
     coords: {
