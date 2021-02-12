@@ -1,17 +1,18 @@
-//Setting constant variables for buttons and containers
+//Setting variables for buttons and containers
 const detailsButton = document.getElementsByClassName("reco-button")
 const watchVideo = document.getElementById("video-btn");
 const videoContainer = document.getElementsByClassName("video-container");
 const moreDetails = document.getElementsByClassName("more-details");
 const scrollButton = document.getElementById("scroll-top");
 
-//Hides the following components when document is ready
+//Document ready function
 $(function () {
+    //Components hidden on page load
     $(videoContainer).hide();
     $(moreDetails).hide();
 
     /* Slideshow created following the Snook tutorial https://snook.ca/archives/javascript/simplest-jquery-slideshow using jQuery */
-    // Function fades in and out from different images producing a slideshow effect 
+    //Images fade in and out creating a slideshow 
     $('.slideshow img:gt(0)').hide();
     setInterval(function () {
         $('.slideshow :first-child')
@@ -24,10 +25,11 @@ $(function () {
         6000);
 });
 
-//Click events for the "Watch Video" CTA
 $(watchVideo).click(function () {
+    //Content toggled when clicked
     $(this).siblings(".video-container").slideToggle();
 
+    //Colour and text of button changes when content is shown
     if ($(this).html() === "Watch Video") {
         $(this).html("Hide Video");
         $(this).addClass("active");
@@ -37,10 +39,11 @@ $(watchVideo).click(function () {
     }
 });
 
-//On click events for the "More Details CTA's"
 $(detailsButton).click(function () {
+    //Content toggled when clicked
     $(this).siblings('.more-details').slideToggle();
 
+    //Colour and text of button changes when content is shown
     if ($(this).html() === "More Details") {
         $(this).html("Hide Details");
         $(this).addClass("active");
@@ -50,10 +53,10 @@ $(detailsButton).click(function () {
     }
 });
 
-// On scroll button adjusted from following WS3schools
-window.onscroll = scrollToTop; // Assigns scroll function to window on scroll
+//Scroll to top button functionality adjusted from W3schools
+window.onscroll = scrollToTop; //Assigns scroll function to window on scroll
 
-//Function displays the button to user when they have scolled 200px from top
+//Displays button to user when they have scolled 200px from top
 function scrollToTop() {
 
     let scrollHeight = 200;
@@ -66,7 +69,7 @@ function scrollToTop() {
 
 }
 
-// On click function to take customer to top of page when button is clicked
+//Takes customer to top of page when button is clicked
 $(scrollButton).click(function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
