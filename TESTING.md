@@ -11,9 +11,9 @@ When checking the lighthouse in the developer tools, Google suggested some thing
 - To improve performance, I compressed all images using TinyPNG.
 - To improve accessibility, I added aria-labels and alt attributes to all links and images. 
 
-Please note that the 'Performance' report is lower than the others, this is because of the slideshow displaying different images at different times. These images were not converted to a next generation format due to compatibility with safari browser.  
+Please note that the 'Performance' report is lower than the others, this is because of the slideshow displaying different images at different times. These images were not converted to a next generation format due to compatibility with safari browser. 
 
-[Lighthouse Results](/docs/testing/stay-in-st-tropez-lighthouse-report)
+[Lighthouse Results](/docs/testing/stay-in-st-tropez-lighthouse-reports.png)
 
 ### Debugging and checking the console:
 ---
@@ -78,16 +78,18 @@ When testing the map, I noticed that there was no sign to the user as to which b
 When testing the maps, I noticed that when an info window was open and another marker was clicked on the current info window was not closing. This wasn't the best UX for the customers as the info windows were piling on-top of each other. To resolve this, I added the below code into the event listener.
 
 ```
+
+ var currWindow = false;
+
  google.maps.event.addListener(marker, 'click', function () {
+     
                 infoWindow.open(map, marker);
-                if (currWindow != null) {
+                if (currWindow) {
                     currWindow.close();
                 }
-                infoWindow.open(map, marker);
                 currWindow = infoWindow;
             });
 
-            var currWindow = null;
 
 ```
 
@@ -117,6 +119,8 @@ When doing the final checks there were no issues with the code. The only errors 
 JavaScript was run through the JS Hint validator to check there were no major issues with the code. 
 
 When running my different scripts through JSHint there were a couple 'warnings' of missing semicolons or unnecessary semicolons. These were either removed or added accordingly. 
+
+No major errors were found when running through JShint.
 
 ### Form Testing:
 ---
